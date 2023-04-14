@@ -10,6 +10,8 @@ use app\Models\User;
 use app\Models\Message;
 use app\Models\Image;
 use app\Models\View;
+use app\Models\Sponsorship;
+use app\Models\Service;
 
 class Apartment extends Model
 {
@@ -47,6 +49,14 @@ class Apartment extends Model
 
     public function views() {
         return $this->hasMany(View::class);
+    }
+
+    public function sponsorships() {
+        return $this->belongsToMany(Sponsorship::class);
+    }
+
+    public function services() {
+        return $this->belongsToMany(Service::class);
     }
 
 }
