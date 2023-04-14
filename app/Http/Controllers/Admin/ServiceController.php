@@ -41,7 +41,7 @@ class ServiceController extends Controller
      */
     public function store(StoreServiceRequest $request)
     {
-        $data = $request->validate();
+        $data = $request->validated();
 
         $newService = Service::create($data);
 
@@ -79,7 +79,7 @@ class ServiceController extends Controller
      */
     public function update(UpdateServiceRequest $request, Service $service)
     {
-        $data = $request->validate();
+        $data = $request->validated();
 
         $service->update($data);
 
