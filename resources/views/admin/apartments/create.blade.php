@@ -85,7 +85,7 @@
 
                     {{-- Price --}}
                     <div class="mb-3">
-                        <label for="price" class="form-label">Immagine progetto</label>
+                        <label for="price" class="form-label">Prezzo</label>
                         <input type="number" 
                             id="price" 
                             class="form-control"
@@ -143,7 +143,7 @@
 
                     {{-- Square meters --}}
                     <div class="mb-3">
-                        <label for="square_meters" class="form-label">Numero di bagni</label>
+                        <label for="square_meters" class="form-label">Metri quadrati</label>
                         <input type="number" 
                             id="square_meters" 
                             class="form-control"
@@ -155,7 +155,7 @@
 
                     {{-- Visibility --}}
                     <div class="mb-3">
-                        <label for="visibility" class="form-label">Disponibilità</label>                     
+                        <label for="visibility" class="form-label">Visibile</label>                     
                         <select class="form-select" name="visibility" aria-label="Default select example" required>
                             <option value="0">No</option>
                             <option value="1">Si</option>
