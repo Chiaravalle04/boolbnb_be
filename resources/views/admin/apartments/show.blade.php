@@ -99,6 +99,10 @@
                 {{ $apartment->square_meters }}
             </h5>
 
+            <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning text-light">
+                Modifica
+            </a>
+
             <hr>
             <form
             action="{{ route('admin.apartments.destroy', $apartment->id) }}"
