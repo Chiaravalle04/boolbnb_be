@@ -99,23 +99,27 @@
                 {{ $apartment->square_meters }}
             </h5>
 
-            <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning text-light">
-                Modifica
-            </a>
+            <div class="container-buttons d-flex">
+                    <!--modifica-->
+                <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning text-light">
+                    Modifica
+                </a>
 
-            <hr>
-            <form
-            action="{{ route('admin.apartments.destroy', $apartment->id) }}"
-            method="POST"
-            class="d-inline"
-            onsubmit="return confirm('Do you really want to delete this appartamento? You won\'t be able to recover it later')"
-        >
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger text-light">
-                elimina
-            </button>
-        </form>
+                    <!--delete-->
+                <hr>
+                <form
+                action="{{ route('admin.apartments.destroy', $apartment->id) }}"
+                method="POST"
+                class="d-inline"
+                onsubmit="return confirm('Do you really want to delete this appartamento? You won\'t be able to recover it later')"
+                >
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger text-light">
+                    elimina
+                </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

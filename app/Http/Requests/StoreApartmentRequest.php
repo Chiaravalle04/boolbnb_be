@@ -33,10 +33,10 @@ class StoreApartmentRequest extends FormRequest
             'lat' => 'required',
             'price' => 'required',
             'availability' => 'required|boolean',
-            'room' => 'required',
-            'bed' => 'required',
+            'room' => 'required|gt:0',
+            'bed' => 'required|gt:0',
             'bathroom' => 'required|gt:0',
-            'square_meters' => 'required',
+            'square_meters' => 'required|gt:20',
             'visibility' => 'required|boolean',
         ];
     }
