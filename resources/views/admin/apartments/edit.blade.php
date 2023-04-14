@@ -75,6 +75,28 @@
                             placeholder="Inserisci l'indirizzo dell'appartamento'...">
                     </div>
                     <div class="mb-3">
+                        <label for="long" class="form-label">Longitudine<span class="text-danger">*</span></label>
+                        <input 
+                            type="number" 
+                            class="form-control" 
+                            id="long"
+                            name="long"
+                            required
+                            value="{{ old('long', $apartment->long) }}" 
+                            placeholder="Inserisci longitudine'...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lat" class="form-label">Latitudine<span class="text-danger">*</span></label>
+                        <input 
+                            type="number" 
+                            class="form-control" 
+                            id="lat"
+                            name="lat"
+                            required
+                            value="{{ old('long', $apartment->lat) }}" 
+                            placeholder="Inserisci latitudine'...">
+                    </div>
+                    <div class="mb-3">
                         <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
                         <input 
                             type="number" 
@@ -139,6 +161,13 @@
                             required
                             value="{{ old('square_meters', $apartment->square_meters) }}" 
                             placeholder="Inserisci il numero di bagni'...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="visibility" class="form-label">Visibile</label>                     
+                        <select class="form-select" name="visibility" aria-label="Default select example" required>
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
                     </div>
                     <div>
                         <p>

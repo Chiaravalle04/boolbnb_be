@@ -26,19 +26,19 @@ class UpdateApartmentRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:apartments,title|max:128',
-            'description'=> 'required',
-            'cover'=> 'required|image|max:2048',
-            'type' => 'required',
-            'address' => 'required',
-            'long' => 'required',
+            'description' => 'required',
+            'cover' => 'required|image|max:2048',
+            'type' => 'required|string',
+            'address' => 'required|string',
+            'long' => 'required|numeric',
             'lat' => 'required',
             'price' => 'required',
-            'availability' => 'required',
-            'room' => 'required',
-            'bed' => 'required',
-            'bathroom' => 'required',
-            'square_meters' => 'required',
-            'visibility' => 'required',
+            'availability' => 'required|boolean',
+            'room' => 'required|gt:0',
+            'bed' => 'required|gt:0',
+            'bathroom' => 'required|gt:0',
+            'square_meters' => 'required|gt:20',
+            'visibility' => 'required|boolean',
         ];
     }
 }
