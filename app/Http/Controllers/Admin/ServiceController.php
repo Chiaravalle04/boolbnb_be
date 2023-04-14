@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Service;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
+
+// Model
+use App\Models\Service;
 
 class ServiceController extends Controller
 {
@@ -16,7 +18,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::all();
+
+        return view('admin.services.index', compact('services'));
     }
 
     /**
@@ -26,7 +30,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.services.create');
     }
 
     /**
@@ -37,7 +41,11 @@ class ServiceController extends Controller
      */
     public function store(StoreServiceRequest $request)
     {
-        //
+        $data = $request->validate();
+
+        $newService = Service::create($data);
+
+        return redirect()->route('admin.services.show', $newService);
     }
 
     /**
@@ -48,7 +56,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        //
+        return view('admin.services.show', compact('service'));
     }
 
     /**
@@ -59,7 +67,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        return view('admin.services.edit', compact('service'));
     }
 
     /**
@@ -71,7 +79,11 @@ class ServiceController extends Controller
      */
     public function update(UpdateServiceRequest $request, Service $service)
     {
-        //
+        $data = $request->validate();
+
+        $service->update($data);
+
+        return redirect()->route('admin.service.show', $service->id);
     }
 
     /**
@@ -82,6 +94,7 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $service->delete();
+        return redirect()->route('admin.services.index');
     }
 }
