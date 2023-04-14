@@ -53,9 +53,16 @@
                                         <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                                     </a>
                                 </li>
+                                
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.apartments.index' ? 'bg-secondary' : '' }}" href="{{route('admin.apartments.index')}}">
                                         <i class="fa-solid fa-house fa-lg fa-fw"></i> Apartments
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.services.index' ? 'bg-secondary' : '' }}" href="{{route('admin.services.index')}}">
+                                        <i class="fa-regular fa-square-check fa-lg fa-fw"></i> Services
                                     </a>
                                 </li>
                             </ul>
