@@ -29,7 +29,7 @@ class StoreApartmentRequest extends FormRequest
             'cover' => 'required|image|max:2048',
             'type' => 'required|string',
             'address' => 'required|string',
-            'long' => 'required|is_numeric',
+            'long' => 'required|numeric',
             'lat' => 'required',
             'price' => 'required',
             'availability' => 'required|boolean',

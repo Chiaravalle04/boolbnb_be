@@ -83,6 +83,30 @@
                         >
                     </div>
 
+                    {{-- Longituidine --}}
+                    <div class="mb-3">
+                        <label for="long" class="form-label">Longituidine</label>
+                        <input type="number" 
+                            id="long" 
+                            class="form-control"
+                            name="long"
+                            value="{{ old('long') }}"
+                            required
+                        >
+                    </div>
+
+                    {{-- Latitudine --}}
+                    <div class="mb-3">
+                        <label for="lat" class="form-label">Latitudine</label>
+                        <input type="number" 
+                            id="lat" 
+                            class="form-control"
+                            name="lat"
+                            value="{{ old('lat') }}"
+                            required
+                        >
+                    </div>
+
                     {{-- Price --}}
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
