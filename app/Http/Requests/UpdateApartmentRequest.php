@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class UpdateApartmentRequest extends FormRequest
 {
     /**
@@ -13,7 +14,7 @@ class UpdateApartmentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,20 @@ class UpdateApartmentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|unique:apartments,title|max:128',
+            'description'=> 'required',
+            'cover'=> 'required|image|max:2048',
+            'type' => 'required',
+            'address' => 'required',
+            'long' => 'required',
+            'lat' => 'required',
+            'price' => 'required',
+            'availability' => 'required',
+            'room' => 'required',
+            'bed' => 'required',
+            'bathroom' => 'required',
+            'square_meters' => 'required',
+            'visibility' => 'required',
         ];
     }
 }
