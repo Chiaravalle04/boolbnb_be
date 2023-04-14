@@ -29,7 +29,7 @@
             <!-- cover -->
             <h5>
                 <strong>Cover:</strong>
-                {{ $apartment->cover }}
+                <img src="{{ $apartment->cover }}" alt="" height="50px" width="50px">
             </h5>
 
             <hr>
@@ -61,7 +61,8 @@
             <hr>
             <!-- price -->
             <h5>
-                {{ $apartment->price }}
+                <strong>Prezzo:</strong>
+                {{ $apartment->price }} €
             </h5>
 
             <hr>
@@ -69,6 +70,7 @@
             <h6>Disponibilità</h6>
             @if ($apartment->availability) 
                <h5>
+                    <strong>C'è disponibilità</strong>
                     {{ $apartment->availability }} √
                </h5>
             @else 
@@ -96,6 +98,20 @@
                 <strong>Metri quadrati:</strong>
                 {{ $apartment->square_meters }}
             </h5>
+
+            <hr>
+            <form
+            action="{{ route('admin.apartments.destroy', $apartment->id) }}"
+            method="POST"
+            class="d-inline"
+            onsubmit="return confirm('Do you really want to delete this appartamento? You won\'t be able to recover it later')"
+        >
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger text-light">
+                elimina
+            </button>
+        </form>
         </div>
     </div>
 </div>

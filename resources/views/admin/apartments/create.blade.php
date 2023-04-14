@@ -46,7 +46,7 @@
                     </div>
 
                     {{-- Cover --}}
-                    <div class="mb-3">
+                   <div class="mb-3">
                         <label for="cover" class="form-label">Inserisci cover*</label>                     
                         <input type="file" 
                             class="form-control" 
