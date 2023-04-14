@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Requests;
+//Helpers:
+use Illuminate\Validation\Rule;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,7 +27,11 @@ class UpdateApartmentRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:apartments,title|max:128',
+            'title' => [
+                'required', 
+                Rule::unique('apartments')->ignore($this->apartment->id),
+                'max:128'
+            ],
             'description' => 'required',
             'cover' => 'required|max:2048',
             'type' => 'required|string',
