@@ -3,7 +3,12 @@
     <div class="container">
         <div class="title my-3">
             <h1>Apartments</h1>
+
+            <a href="{{ route('admin.apartments.create') }}" class="btn btn-primary my-3">
+                New Apartment
+            </a>
         </div>
+        
         <table class="table">
             <thead>
               <tr>
