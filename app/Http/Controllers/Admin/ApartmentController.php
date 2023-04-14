@@ -41,7 +41,7 @@ class ApartmentController extends Controller
      */
     public function store(StoreApartmentRequest $request)
     {
-        $data = $request->validate();
+        $data = $request->validated();
 
         if (array_key_exists('cover', $data)) {
 
