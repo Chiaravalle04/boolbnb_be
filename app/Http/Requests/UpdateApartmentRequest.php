@@ -27,7 +27,7 @@ class UpdateApartmentRequest extends FormRequest
         return [
             'title' => 'required|unique:apartments,title|max:128',
             'description' => 'required',
-            'cover' => 'required|image|max:2048',
+            'cover' => 'required|max:2048',
             'type' => 'required|string',
             'address' => 'required|string',
             'long' => 'required|numeric',
