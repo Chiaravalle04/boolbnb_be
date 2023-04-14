@@ -15,7 +15,7 @@
                     @endif
                 </div>
 
-                <form class="p-4" action="{{ route('admin.apartments.store') }}" method="post" enctype="multipart/form-data">
+                <form class="p-4" action="{{ route('admin.apartments.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     {{-- Title --}}
