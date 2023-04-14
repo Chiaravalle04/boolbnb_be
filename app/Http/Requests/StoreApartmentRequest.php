@@ -27,17 +27,17 @@ class StoreApartmentRequest extends FormRequest
             'title' => 'required|unique:apartments,title|max:128',
             'description' => 'required',
             'cover' => 'required|image|max:2048',
-            'type' => 'required',
-            'address' => 'required',
-            'long' => 'required',
+            'type' => 'required|string',
+            'address' => 'required|string',
+            'long' => 'required|is_numeric',
             'lat' => 'required',
             'price' => 'required',
-            'availability' => 'required',
+            'availability' => 'required|boolean',
             'room' => 'required',
             'bed' => 'required',
-            'bathroom' => 'required',
+            'bathroom' => 'required|gt:0',
             'square_meters' => 'required',
-            'visibility' => 'required',
+            'visibility' => 'required|boolean',
         ];
     }
 }
