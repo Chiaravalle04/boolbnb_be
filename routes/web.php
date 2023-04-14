@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\ApartmentController;
+use App\Http\Controllers\Admin\ImageController;
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SponsorshipController;
+use App\Http\Controllers\Admin\ViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +29,14 @@ Route::get('/', function () {
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+
+    Route::resource('apartments', ApartmentController::class);
+    Route::resource('messages', MessageController::class);
+    Route::resource('services', ServiceController::class);
+    Route::resource('sponsorships', SponsorshipController::class);
+    Route::resource('images', ImageController::class);
+    Route::resource('views', ViewController::class);
+
 });
 
 Route::middleware('auth')->group(function () {

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Apartment;
-use App\Http\Requests\StoreApartmentRequest;
-use App\Http\Requests\UpdateApartmentRequest;
+use App\Http\Controllers\Controller;
+use App\Models\View;
+use App\Http\Requests\StoreViewRequest;
+use App\Http\Requests\UpdateViewRequest;
 
-class ApartmentController extends Controller
+class ViewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class ApartmentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreApartmentRequest  $request
+     * @param  \App\Http\Requests\StoreViewRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreApartmentRequest $request)
+    public function store(StoreViewRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class ApartmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Apartment  $apartment
+     * @param  \App\Models\View  $view
      * @return \Illuminate\Http\Response
      */
-    public function show(Apartment $apartment)
+    public function show(View $view)
     {
         //
     }
@@ -53,10 +54,10 @@ class ApartmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Apartment  $apartment
+     * @param  \App\Models\View  $view
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apartment $apartment)
+    public function edit(View $view)
     {
         //
     }
@@ -64,11 +65,11 @@ class ApartmentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateApartmentRequest  $request
-     * @param  \App\Models\Apartment  $apartment
+     * @param  \App\Http\Requests\UpdateViewRequest  $request
+     * @param  \App\Models\View  $view
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateApartmentRequest $request, Apartment $apartment)
+    public function update(UpdateViewRequest $request, View $view)
     {
         //
     }
@@ -76,10 +77,10 @@ class ApartmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Apartment  $apartment
+     * @param  \App\Models\View  $view
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apartment $apartment)
+    public function destroy(View $view)
     {
         //
     }

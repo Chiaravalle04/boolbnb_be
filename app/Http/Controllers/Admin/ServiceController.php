@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Sponsorship;
-use App\Http\Requests\StoreSponsorshipRequest;
-use App\Http\Requests\UpdateSponsorshipRequest;
+use App\Http\Controllers\Controller;
+use App\Models\Service;
+use App\Http\Requests\StoreServiceRequest;
+use App\Http\Requests\UpdateServiceRequest;
 
-class SponsorshipController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class SponsorshipController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSponsorshipRequest  $request
+     * @param  \App\Http\Requests\StoreServiceRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSponsorshipRequest $request)
+    public function store(StoreServiceRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class SponsorshipController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Sponsorship  $sponsorship
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Sponsorship $sponsorship)
+    public function show(Service $service)
     {
         //
     }
@@ -53,10 +54,10 @@ class SponsorshipController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Sponsorship  $sponsorship
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sponsorship $sponsorship)
+    public function edit(Service $service)
     {
         //
     }
@@ -64,11 +65,11 @@ class SponsorshipController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSponsorshipRequest  $request
-     * @param  \App\Models\Sponsorship  $sponsorship
+     * @param  \App\Http\Requests\UpdateServiceRequest  $request
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSponsorshipRequest $request, Sponsorship $sponsorship)
+    public function update(UpdateServiceRequest $request, Service $service)
     {
         //
     }
@@ -76,10 +77,10 @@ class SponsorshipController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Sponsorship  $sponsorship
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sponsorship $sponsorship)
+    public function destroy(Service $service)
     {
         //
     }
