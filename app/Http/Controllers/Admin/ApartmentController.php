@@ -9,6 +9,9 @@ use App\Http\Requests\UpdateApartmentRequest;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
+// Models
+use App\Models\Service;
+
 class ApartmentController extends Controller
 {
     /**
@@ -30,7 +33,9 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        return view('admin.apartments.create');
+        $services = Service::all();
+
+        return view('admin.apartments.create', compact('services'));
     }
 
     /**
@@ -52,6 +57,12 @@ class ApartmentController extends Controller
         $data['slug'] = Str::slug($data['title']);
 
         $newApartment = Apartment::create($data);
+
+        if (array_key_exists('services', $data)) {
+
+            $newApartment->services()->sync($data['services']);
+
+        }
 
         return redirect()->route('admin.apartments.show', $newApartment);
     }
@@ -88,6 +99,16 @@ class ApartmentController extends Controller
     public function update(UpdateApartmentRequest $request, Apartment $apartment)
     {
         $data = $request->validated();
+
+        if (array_key_exists('services', $data)) {
+
+            $apartment->services()->sync($data['services']);
+
+        } else {
+
+            $apartment->services()->detach();
+
+        }
 
         $slug = Str::slug($data['title']);
 

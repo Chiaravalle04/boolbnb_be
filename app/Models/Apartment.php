@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 // Models
-use app\Models\User;
-use app\Models\Message;
-use app\Models\Image;
-use app\Models\View;
-use app\Models\Sponsorship;
-use app\Models\Service;
+use App\Models\User;
+use App\Models\Message;
+use App\Models\Image;
+use App\Models\View;
+use App\Models\Sponsorship;
+use App\Models\Service;
 
 class Apartment extends Model
 {

@@ -198,6 +198,25 @@
                         </select>
                     </div>
 
+                    {{-- Services --}}
+                    <div class="mb-3">
+                        <label class="form-label">Servizi</label>
+                        @foreach ($services as $service)
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    name="services[]"
+                                    type="checkbox"
+                                    id="tag-{{ $service->id }}"
+                                    value="{{ $service->id }}"
+                                    {{ in_array($service->id, old('tags', [])) ? 'checked' : '' }}>
+                                <label class="form-check-label" for="tag-{{ $service->id }}">
+                                    {{ $service->name }}
+                                </label>
+                            </div>
+                        @endforeach
+                    </div>
+
                     <button class="btn btn-primary" type="submit">Aggiungi</button>
                 </form>
 
