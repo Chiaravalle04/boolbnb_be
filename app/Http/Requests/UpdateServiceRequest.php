@@ -24,7 +24,7 @@ class UpdateServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:services,name|max:128',
+            'name' => 'required|unique:services,name|max:50',
         ];
     }
 }
