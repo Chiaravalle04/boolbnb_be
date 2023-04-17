@@ -180,6 +180,30 @@
                             <option value="1">Si</option>
                         </select>
                     </div>
+
+                    {{-- Services --}}
+                    <div class="mb-3">
+                        <label class="form-label">Servizi</label>
+                        @foreach ($services as $service)
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    name="services[]"
+                                    type="checkbox"
+                                    id="tag-{{ $service->id }}"
+                                    value="{{ $service->id }}"
+                                    @if (old('services') && is_array(old('services')) && count(old('services')) > 0)
+                                        {{ in_array($service->id, old('services')) ? 'checked' : '' }}
+                                    @elseif($apartment->services->contains($service))
+                                        checked
+                                    @endif>
+                                <label class="form-check-label" for="tag-{{ $service->id }}">
+                                    {{ $service->name }}
+                                </label>
+                            </div>
+                        @endforeach
+                    </div>
+
                     <div>
                         <p>
                             N.B. i campi contrassegnati con <span class="text-danger">*</span> sono obbligatori.

@@ -75,7 +75,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        $services = Service::all();
+        $services = $apartment->services;
 
         return view('admin.apartments.show', compact('apartment', 'services'));
     }
@@ -88,7 +88,9 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
-        return view('admin.apartments.edit', compact('apartment'));
+        $services = Service::all();
+
+        return view('admin.apartments.edit', compact('apartment', 'services'));
     }
 
     /**
