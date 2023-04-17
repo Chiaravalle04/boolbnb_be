@@ -102,6 +102,7 @@
                             name="long"
                             value="{{ old('long') }}"
                             required
+                            step="any"
                         >
                     </div>
 
@@ -114,6 +115,7 @@
                             name="lat"
                             value="{{ old('lat') }}"
                             required
+                            step="any"
                         >
                     </div>
 
