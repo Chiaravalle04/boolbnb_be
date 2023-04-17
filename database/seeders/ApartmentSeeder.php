@@ -41,7 +41,6 @@ class ApartmentSeeder extends Seeder
                 'visibility' => $faker->boolean(),
                 'visibility' => $faker->boolean(),
             ]);
-
         }
     }
 }
