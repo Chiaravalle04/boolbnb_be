@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 // Models
-use app\Models\Apartment;
+use App\Models\Apartment;
 
 class Sponsorship extends Model
 {

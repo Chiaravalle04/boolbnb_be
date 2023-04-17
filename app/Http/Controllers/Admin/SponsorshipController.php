@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Sponsorship;
 use App\Http\Requests\StoreSponsorshipRequest;
 use App\Http\Requests\UpdateSponsorshipRequest;
+
+// Models
+use App\Models\Apartment;
+use App\Models\Sponsorship;
 
 class SponsorshipController extends Controller
 {
@@ -55,7 +58,9 @@ class SponsorshipController extends Controller
      */
     public function show(Sponsorship $sponsorship)
     {
-        return view('admin.sponsorships.show', compact('sponsorship'));
+        $apartments = $sponsorship->apartments;
+
+        return view('admin.sponsorships.show', compact('sponsorship', 'apartments'));
     }
 
     /**
