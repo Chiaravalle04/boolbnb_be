@@ -16,7 +16,9 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        $images = Image::all();
+
+        return view('admin.images.index', compact('images'));
     }
 
     /**
@@ -26,7 +28,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.images.create');
     }
 
     /**
@@ -37,7 +39,11 @@ class ImageController extends Controller
      */
     public function store(StoreImageRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $newImage = Image::create($data);
+
+        return redirect()->route('admin.images.show', $newImage);
     }
 
     /**
@@ -48,7 +54,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
+        return view('admin.images.show', compact('image'));
     }
 
     /**
@@ -59,7 +65,7 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        //
+        return view('admin.images.edit', compact('image'));
     }
 
     /**
@@ -71,7 +77,11 @@ class ImageController extends Controller
      */
     public function update(UpdateImageRequest $request, Image $image)
     {
-        //
+        $data = $request->validated();
+
+        $image->update($data);
+
+        return redirect()->route('admin.images.index', $image->id);
     }
 
     /**
@@ -82,6 +92,8 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        $image->delete();
+
+        return redirect()->route('admin.images.index');
     }
 }
