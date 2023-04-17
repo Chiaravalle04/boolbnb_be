@@ -23,6 +23,14 @@ class ApartmentController extends Controller
     {
         $apartments = Apartment::all();
 
+        $titleParam = request()->input('title');
+        if (isset($titleParam)) {
+            $apartments = Apartment::where('title', 'LIKE', '%'.$titleParam.'%')->get();
+        }
+        else {
+            $apartments = Apartment::all();
+        }
+
         return view('admin.apartments.index', compact('apartments'));
     }
 
