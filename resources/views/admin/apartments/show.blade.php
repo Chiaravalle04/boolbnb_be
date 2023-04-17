@@ -99,14 +99,18 @@
                 {{ $apartment->square_meters }}
             </h5>
 
-            @foreach ($services as $service)
-            @if ($service->name)
-                <h3>{{ $service->name }}</h3>
-            @else
-                <h3>Nessun servizio</h3>
-            @endif
-            @endforeach
-
+            <h4>
+                Servizi:
+                @if (count($apartment->services) > 0)
+                    @foreach ($apartment->services as $service)
+                        <ul>
+                            <a class="text-decoration-none" href="#">{{$service->name }}</a>
+                        </ul>
+                    @endforeach
+                    @else
+                    Nessun servizio
+                @endif
+            </h4>
             <!-- modifica e elimina -->
             <div class="container-buttons d-flex">
                     <!--modifica-->
