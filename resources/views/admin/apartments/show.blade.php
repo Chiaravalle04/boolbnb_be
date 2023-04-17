@@ -99,6 +99,7 @@
                 {{ $apartment->square_meters }}
             </h5>
 
+            <!-- modifica e elimina -->
             <div class="container-buttons d-flex">
                     <!--modifica-->
                 <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning text-light">
