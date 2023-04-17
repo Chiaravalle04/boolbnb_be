@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Message;
 use App\Http\Requests\StoreMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
+use App\Models\Apartment;
 
 class MessageController extends Controller
 {
@@ -18,7 +19,9 @@ class MessageController extends Controller
     {
         $messages = Message::all();
 
-        return view('admin.messages.index', compact('messages'));
+        $apartments = Apartment::all();
+
+        return view('admin.messages.index', compact('messages', 'apartments'));
     }
 
     /**
@@ -54,6 +57,8 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+        $messages = Message::all();
+
         return view('admin.messages.show', compact('message'));
     }
 
