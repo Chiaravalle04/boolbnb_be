@@ -45,7 +45,7 @@ class ServiceController extends Controller
 
         $newService = Service::create($data);
 
-        return redirect()->route('admin.services.show', $newService);
+        return redirect()->route('admin.services.index', $newService);
     }
 
     /**
@@ -56,7 +56,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('admin.services.show', compact('service'));
+        // return view('admin.services.show', compact('service'));
     }
 
     /**

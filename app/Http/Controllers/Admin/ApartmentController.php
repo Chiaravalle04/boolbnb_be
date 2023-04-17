@@ -104,6 +104,18 @@ class ApartmentController extends Controller
     {
         $data = $request->validated();
 
+        if (array_key_exists('cover', $data)) {
+
+            $data['cover'] = Storage::put('apartments', $data['cover']);
+
+            if ($apartment->cover) {
+
+                Storage::delete($apartment->cover);
+
+            }
+
+        }
+
         if (array_key_exists('services', $data)) {
 
             $apartment->services()->sync($data['services']);

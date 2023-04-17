@@ -8,10 +8,10 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">id</th>
-            <th scope="col">name</th>
-            <th scope="col">email</th>
-            <th scope="col">apartment name</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Apartment Name</th>
           </tr>
         </thead>
         
@@ -27,8 +27,8 @@
                     <td>NULL</td>
                 @endif
                 <td>
-                    <a href="{{ route('admin.messages.show', $message->id) }}" class="btn btn-outline-primary border">
-                        visualizza messaggio
+                    <a href="{{ route('admin.messages.show', $message->id) }}" class="btn btn-primary">
+                        Visualizza messaggio
                     </a>
                 </td>
             </tr>

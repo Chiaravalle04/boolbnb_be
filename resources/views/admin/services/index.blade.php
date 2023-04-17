@@ -23,9 +23,6 @@
                 <th scope="row">{{ $service->id }}</th>
                 <td>{{ $service->name }}</td>
                 <td class="text-end">
-                    <a href="{{ route('admin.services.show', $service->id) }}" class="btn border btn-success">
-                        Visualizza
-                    </a>
                     <a href="{{ route('admin.services.edit', $service->id) }}" class="btn btn-warning">
                       Modifica
                     </a>
