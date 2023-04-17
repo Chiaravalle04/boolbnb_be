@@ -24,7 +24,8 @@ class StoreViewRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'user_ip' => 'required',
+            'viewed_at' => 'required'
         ];
     }
 }
