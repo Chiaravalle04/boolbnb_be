@@ -83,7 +83,7 @@ class ServiceController extends Controller
 
         $service->update($data);
 
-        return redirect()->route('admin.services.show', $service->id);
+        return redirect()->route('admin.services.index', $service->id);
     }
 
     /**
