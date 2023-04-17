@@ -99,14 +99,6 @@
                 {{ $apartment->square_meters }}
             </h5>
 
-            @foreach ($services as $service)
-            @if ($service->name)
-                <h3>{{ $service->name }}</h3>
-            @else
-                <h3>Nessun servizio</h3>
-            @endif
-            @endforeach
-
             <!-- modifica e elimina -->
             <div class="container-buttons d-flex">
                     <!--modifica-->
