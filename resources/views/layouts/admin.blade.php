@@ -65,6 +65,12 @@
                                         <i class="fa-regular fa-square-check fa-lg fa-fw"></i> Services
                                     </a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.messages.index' ? 'bg-secondary' : '' }}" href="{{route('admin.messages.index')}}">
+                                        <i class="fa-regular fa-image fa-lg fa-fw"></i> Messages
+                                    </a>
+                                </li>
                             </ul>
 
 
