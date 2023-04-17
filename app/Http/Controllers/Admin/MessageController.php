@@ -57,6 +57,8 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+        $messages = Message::all();
+
         return view('admin.messages.show', compact('message'));
     }
 
