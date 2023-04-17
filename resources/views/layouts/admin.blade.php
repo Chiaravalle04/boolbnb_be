@@ -71,6 +71,12 @@
                                         <i class="fa-regular fa-image fa-lg fa-fw"></i> Messages
                                     </a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.sponsorships.index' ? 'bg-secondary' : '' }}" href="{{route('admin.sponsorships.index')}}">
+                                        <i class="fa-solid fa-award fa-lg fa-fw"></i> Sponsorships
+                                    </a>
+                                </li>
                             </ul>
 
 
