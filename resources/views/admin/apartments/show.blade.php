@@ -20,6 +20,19 @@
                         <li class="list-group-item"><span class="fw-bold">Numero bagni:</span> <span class="badge bg-primary text-wrap">{{ $apartment->bathroom}}</span></li>
                         <li class="list-group-item"><span class="fw-bold">Prezzo:</span> <span class="badge bg-primary text-wrap">{{ $apartment->price }}$ /night</span></li>
                         <li class="list-group-item"><span class="fw-bold">Tipologia:</span> <span class="badge bg-primary text-wrap">{{ $apartment->type }}</span></li>
+                        <li class="list-group-item"><span class="fw-bold">
+                            Tipo di sponsorhip: 
+                            @if (count($apartment->sponsorships) > 0)
+                                @foreach ($apartment->sponsorships as $sponsorship)
+                                    <div>
+                                        <a class="text-decoration-none">{{$sponsorship->name }}</a>
+                                    </div>
+                                @endforeach
+                            
+                            @else
+                                Nessuna sponsorizzazione
+                            @endif
+                        </li>
                         <li class="list-group-item">
                             <h6>Disponibilità:</h6>
                                 @if ($apartment->availability) 
@@ -38,7 +51,7 @@
                             @if (count($apartment->services) > 0)
                                 @foreach ($apartment->services as $service)
                                     <div>
-                                        <a class="text-decoration-none" href="#">{{$service->name }}</a>
+                                        <a class="text-decoration-none">{{$service->name }}</a>
                                     </div>
                                 @endforeach
                             
@@ -52,7 +65,7 @@
             </div>
 
             <!-- modifica e elimina -->
-            <div class="container-buttons d-flex">
+            <div class="container-buttons d-flex mb-5">
                     <!--modifica-->
                 <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning text-light">
                     Modifica
