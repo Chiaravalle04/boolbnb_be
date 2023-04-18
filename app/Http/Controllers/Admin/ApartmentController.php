@@ -34,7 +34,7 @@ class ApartmentController extends Controller
             $apartments = Apartment::all();
         }
 
-        
+        // METODO PER FAR VEDERE GLI APPARTAMENTI DI QUEL DETERMINATO 
 
         // $user = Auth::user();
 
