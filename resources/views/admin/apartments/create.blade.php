@@ -28,6 +28,8 @@
                 <form class="p-4" action="{{ route('admin.apartments.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
+                    {{-- <input type="hidden" name="user_id" value="{{ Auth::id() }}"> --}}
+
                     {{-- Title --}}
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo*</label>

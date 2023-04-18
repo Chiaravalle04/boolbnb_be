@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Storage;
 // Models
 use App\Models\Service;
 
+// helper
+use Illuminate\Support\Facades\Auth;
+
 class ApartmentController extends Controller
 {
     /**
@@ -32,6 +35,18 @@ class ApartmentController extends Controller
         }
 
         return view('admin.apartments.index', compact('apartments'));
+
+        // $user = Auth::user();
+
+        // $apartments = $user->apartments;
+
+        // $titleParam = request()->input('title');
+        // if (isset($titleParam)) {
+        //     $apartments = Apartment::where('title', 'LIKE', '%'.$titleParam.'%')->get();
+        // }
+        // else {
+        //     $apartments;
+        // }
     }
 
     /**
