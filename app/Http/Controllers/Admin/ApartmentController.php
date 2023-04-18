@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Apartment;
 use App\Http\Requests\StoreApartmentRequest;
 use App\Http\Requests\UpdateApartmentRequest;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+
 
 // Models
 use App\Models\Service;
+use App\Models\Apartment;
 
 // helper
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 class ApartmentController extends Controller
 {
     /**
@@ -24,29 +24,29 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments = Apartment::all();
-
-        $titleParam = request()->input('title');
-        if (isset($titleParam)) {
-            $apartments = Apartment::where('title', 'LIKE', '%'.$titleParam.'%')->get();
-        }
-        else {
-            $apartments = Apartment::all();
-        }
-
-        // METODO PER FAR VEDERE GLI APPARTAMENTI DI QUEL DETERMINATO 
-
-        // $user = Auth::user();
-
-        // $apartments = $user->apartments;
+        // $apartments = Apartment::all();
 
         // $titleParam = request()->input('title');
         // if (isset($titleParam)) {
         //     $apartments = Apartment::where('title', 'LIKE', '%'.$titleParam.'%')->get();
         // }
         // else {
-        //     $apartments;
+        //     $apartments = Apartment::all();
         // }
+
+        
+        // METODO PER FAR VEDERE GLI APPARTAMENTI DI QUEL DETERMINATO 
+        $user = Auth::user();
+
+        $apartments = $user->apartments;
+
+        $titleParam = request()->input('title');
+        if (isset($titleParam)) {
+            $apartments = Apartment::where('title', 'LIKE', '%'.$titleParam.'%')->get();
+        }
+        else {
+            $apartments;
+        }
         
         return view('admin.apartments.index', compact('apartments'));
     }
