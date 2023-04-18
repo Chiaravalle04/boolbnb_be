@@ -34,7 +34,7 @@ class ApartmentController extends Controller
             $apartments = Apartment::all();
         }
 
-        return view('admin.apartments.index', compact('apartments'));
+        
 
         // $user = Auth::user();
 
@@ -47,6 +47,8 @@ class ApartmentController extends Controller
         // else {
         //     $apartments;
         // }
+        
+        return view('admin.apartments.index', compact('apartments'));
     }
 
     /**
@@ -78,6 +80,7 @@ class ApartmentController extends Controller
         }
 
         $data['slug'] = Str::slug($data['title']);
+        // $data['user_id'] = Auth::id();
 
         $newApartment = Apartment::create($data);
 
