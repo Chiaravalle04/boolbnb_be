@@ -80,9 +80,10 @@ class ApartmentController extends Controller
         }
 
         $data['slug'] = Str::slug($data['title']);
-        // $data['user_id'] = Auth::id();
 
-        $newApartment = Apartment::create($data);
+        $data['user_id'] = Auth::user()->id;
+
+        $newApartment = Apartment::create($data);        
 
         if (array_key_exists('services', $data)) {
 

@@ -44,6 +44,15 @@
                         >
                     </div>
 
+                    <div class="mb-3 d-none">
+                        <label for="user_id" class="form-label"></label>
+                        <input type="number" 
+                            class="form-control" 
+                            id="user_id" 
+                            name="user_id"
+                        >
+                    </div>
+
                     {{-- Description --}}
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione*</label>
