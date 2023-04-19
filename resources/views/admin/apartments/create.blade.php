@@ -98,7 +98,12 @@
                     {{-- Address --}}
                     <div class="mb-3">
                         <label for="address" class="form-label">Indirizzo<span class="text-danger">*</span></label>
-                        <input type="text" 
+                        <div class="form-outline w-100" id="autocomplete-list">
+                            {{-- <input type="text" class="form-control" id="address" placeholder="Insert address" name="address"
+                        value="{{ old('address', $apartment->address) }}" required> --}}
+                        </div>
+                        <ul id="autocomplete-list"></ul>
+                        {{-- <input type="text" 
                             class="form-control" 
                             id="address" 
                             name="address"
@@ -106,7 +111,7 @@
                             placeholder="Inserisci l'indirizzo..."
                             required
                             maxlength="255"
-                        >
+                        > --}}
                     </div>
 
                     {{-- Price --}}
