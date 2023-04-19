@@ -23,7 +23,7 @@ input.addEventListener("keyup", function () {
             countrySet: 'IT'
         }
     }).then(function (response) {
-    
+
         console.log(response.data.results);
         const results = response.data.results;
 
@@ -41,7 +41,7 @@ input.addEventListener("keyup", function () {
             });
             autocompleteList.appendChild(liElement);
         }
-        
+
     }).catch(function (error) {
         console.log(error);
     });
