@@ -4,8 +4,25 @@
     <div class="title my-3">
         <h1>Messaggi</h1>
     </div>
+
+    @foreach ($messages as $message)
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4>{{ $message->name }}</h4>
+            <h6>{{ $message->email }}</h6>
+            @if ($message->apartment_id)
+            <p><b>Appartamento:</b> {{ $message->apartment->title }}</p>
+            @else
+                <p>Nessun Appartamento</p>
+            @endif
+            <a href="{{ route('admin.messages.show', $message->id) }}" class="btn btn-primary">
+                Visualizza messaggio
+            </a>
+        </div>
+    </div>
+    @endforeach
     
-    <table class="table">
+    {{-- <table class="table">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -34,6 +51,6 @@
             </tr>
           @endforeach
         </tbody>
-      </table>
+      </table> --}}
 </div>
 @endsection

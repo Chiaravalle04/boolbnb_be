@@ -72,7 +72,9 @@ class MessageController extends Controller
     {
         $messages = Message::all();
 
-        return view('admin.messages.show', compact('message'));
+        $apartments = Apartment::all();
+
+        return view('admin.messages.show', compact('message', 'apartments'));
     }
 
     /**
