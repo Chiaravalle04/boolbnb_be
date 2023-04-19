@@ -35,6 +35,9 @@ input.addEventListener("keyup", function () {
             const resultList = results[i].address.freeformAddress;
             const liElement = document.createElement('li');
             liElement.innerHTML = resultList;
+            liElement.classList.add('list-group-item');
+            liElement.classList.add('list-group-item-action');
+            liElement.style = 'cursor: pointer';
             liElement.addEventListener('click', function () {
                 input.value = resultList;
                 autocompleteList.innerHTML = '';

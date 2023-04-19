@@ -102,7 +102,7 @@
                             <input type="text" class="form-control" id="address" placeholder="Insert address" name="address"
                         value="{{ old('address') }}" required>
                         </div>
-                        <ul id="autocomplete-list"></ul>
+                        <ul id="autocomplete-list" class="list-group"></ul>
                         {{-- <input type="text" 
                             class="form-control" 
                             id="address" 
