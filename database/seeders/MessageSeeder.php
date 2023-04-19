@@ -19,7 +19,7 @@ class MessageSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 25; $i++) {
 
             $apartmentId = Apartment::inRandomOrder()->first()->id;
 

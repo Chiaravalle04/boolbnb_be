@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Apartment;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,12 +20,15 @@ class ApartmentSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 25; $i++) {
 
             $title = $faker->unique()->sentence(4);
 
+            $userId = User::inRandomOrder()->first()->id;
+
             Apartment::create([
                 'title' => $title,
+                'user_id' => $userId,
                 'slug' => Str::slug($title),
                 'description' => $faker->paragraph(),
                 'cover' => $faker->imageUrl(360, 360, 'animals', true),

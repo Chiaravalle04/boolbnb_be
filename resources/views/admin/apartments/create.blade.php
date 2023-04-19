@@ -32,7 +32,7 @@
 
                     {{-- Title --}}
                     <div class="mb-3">
-                        <label for="title" class="form-label">Titolo*</label>
+                        <label for="title" class="form-label">Titolo<span class="text-danger">*</span></label>
                         <input type="text" 
                             class="form-control" 
                             id="title" 
@@ -46,7 +46,7 @@
 
                     {{-- Description --}}
                     <div class="mb-3">
-                        <label for="description" class="form-label">Descrizione*</label>
+                        <label for="description" class="form-label">Descrizione<span class="text-danger">*</span></label>
                         <textarea 
                             class="form-control" 
                             id="description" 
@@ -59,7 +59,7 @@
 
                     {{-- Cover --}}
                    <div class="mb-3">
-                        <label for="cover" class="form-label">Inserisci cover*</label>                     
+                        <label for="cover" class="form-label">Inserisci cover<span class="text-danger">*</span></label>                     
                         <input type="file" 
                             class="form-control" 
                             id="cover" 
@@ -71,7 +71,7 @@
 
                     {{-- Type --}}
                     <div class="mb-3">
-                        <label for="type" class="form-label">Tipo di struttura</label>                     
+                        <label for="type" class="form-label">Tipo di struttura<span class="text-danger">*</span></label>                     
                         <select class="form-select" name="type" aria-label="Default select example" required>
                             <option value="Appartamento">Appartamento</option>
                             <option value="Stanza">Stanza</option>
@@ -83,7 +83,7 @@
 
                     {{-- City --}}
                     <div class="mb-3">
-                        <label for="city" class="form-label">Città</label>
+                        <label for="city" class="form-label">Città<span class="text-danger">*</span></label>
                         <input type="text" 
                             class="form-control" 
                             id="city" 
@@ -97,7 +97,7 @@
 
                     {{-- Address --}}
                     <div class="mb-3">
-                        <label for="address" class="form-label">Indirizzo</label>
+                        <label for="address" class="form-label">Indirizzo<span class="text-danger">*</span></label>
                         <input type="text" 
                             class="form-control" 
                             id="address" 
@@ -111,7 +111,7 @@
 
                     {{-- Price --}}
                     <div class="mb-3">
-                        <label for="price" class="form-label">Prezzo</label>
+                        <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="price" 
                             class="form-control"
@@ -124,7 +124,7 @@
 
                     {{-- Availability --}}
                     <div class="mb-3">
-                        <label for="availability" class="form-label">Disponibilità</label>                     
+                        <label for="availability" class="form-label">Disponibilità<span class="text-danger">*</span></label>                     
                         <select class="form-select" name="availability" aria-label="Default select example" required>
                             <option value="0">No</option>
                             <option value="1">Si</option>
@@ -133,7 +133,7 @@
 
                     {{-- Room --}}
                     <div class="mb-3">
-                        <label for="room" class="form-label">Numero di stanze</label>
+                        <label for="room" class="form-label">Numero di stanze<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="room" 
                             class="form-control"
@@ -145,7 +145,7 @@
 
                     {{-- Bed --}}
                     <div class="mb-3">
-                        <label for="bed" class="form-label">Numero di letti</label>
+                        <label for="bed" class="form-label">Numero di letti<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="bed" 
                             class="form-control"
@@ -157,7 +157,7 @@
 
                     {{-- Bathroom --}}
                     <div class="mb-3">
-                        <label for="bathroom" class="form-label">Numero di bagni</label>
+                        <label for="bathroom" class="form-label">Numero di bagni<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="bathroom" 
                             class="form-control"
@@ -169,7 +169,7 @@
 
                     {{-- Square meters --}}
                     <div class="mb-3">
-                        <label for="square_meters" class="form-label">Metri quadrati</label>
+                        <label for="square_meters" class="form-label">Metri quadrati<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="square_meters" 
                             class="form-control"
@@ -181,7 +181,7 @@
 
                     {{-- Visibility --}}
                     <div class="mb-3">
-                        <label for="visibility" class="form-label">Visibile</label>                     
+                        <label for="visibility" class="form-label">Visibile<span class="text-danger">*</span></label>                     
                         <select class="form-select" name="visibility" aria-label="Default select example" required>
                             <option value="0">No</option>
                             <option value="1">Si</option>
@@ -207,7 +207,13 @@
                         @endforeach
                     </div>
 
-                    <button class="btn btn-primary" type="submit">Aggiungi</button>
+                    <div>
+                        <p>
+                            N.B. i campi contrassegnati con <span class="text-danger">*</span> sono obbligatori.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Aggiungi Appartamento</button>
                 </form>
 
             </div>

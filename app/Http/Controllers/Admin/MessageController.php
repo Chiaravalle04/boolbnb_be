@@ -23,9 +23,16 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
+        $userId = Auth::id();
 
-        $apartments = Apartment::all();
+        $apartments = Apartment::where('user_id', Auth::user()->id)->get();
+
+        // Recuperare un elenco di messaggi relativi agli appartamenti di un utente specifico. 
+        $messages = Message::whereHas('apartment', function ($query) use ($userId) {
+
+            $query->where('user_id', $userId);
+
+        })->orderBy('created_at', 'desc')->get();
 
         return view('admin.messages.index', compact('messages', 'apartments'));
     }

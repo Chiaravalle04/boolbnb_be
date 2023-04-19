@@ -57,7 +57,7 @@
                                 {{-- appartamenti --}}
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.apartments.index' ? 'bg-secondary' : '' }}" href="{{route('admin.apartments.index')}}">
-                                        <i class="fa-solid fa-house fa-lg fa-fw"></i> Apartments
+                                        <i class="fa-solid fa-house fa-lg fa-fw"></i> Appartamenti
                                     </a>
                                 </li>
 
@@ -70,7 +70,7 @@
                                 {{-- messaggi --}}
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.messages.index' ? 'bg-secondary' : '' }}" href="{{route('admin.messages.index')}}">
-                                        <i class="fa-regular fa-image fa-lg fa-fw"></i> Messages
+                                        <i class="fa-regular fa-image fa-lg fa-fw"></i> Messaggi
                                     </a>
                                 </li>
 

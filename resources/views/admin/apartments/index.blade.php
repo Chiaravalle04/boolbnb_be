@@ -5,16 +5,16 @@
             <div class="col-12">
                 <div class="title my-3">
                     <h1>
-                        Apartments
+                        Appartamenti 
                     </h1>
 
-                    <form class="d-flex mt-5" role="search" method="GET" action="{{ route('admin.apartments.index') }}">
+                    {{-- <form class="d-flex mt-5" role="search" method="GET" action="{{ route('admin.apartments.index') }}">
                         <input class="form-control me-2" type="search" placeholder="Inserisci il nome di una casa..." aria-label="Search" name="title" value="{{ request()->input('title') }}">
                         <button class="btn btn-outline-success" type="submit">Cerca</button>
-                    </form>
+                    </form> --}}
         
                     <a href="{{ route('admin.apartments.create') }}" class="btn btn-primary my-3">
-                        New Apartment
+                        Aggiungi Appartamento
                     </a>
                 </div>
             </div>
