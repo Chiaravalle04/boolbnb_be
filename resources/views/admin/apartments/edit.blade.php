@@ -22,7 +22,7 @@
         </div>
         <div class="row mb-4">
             <div class="col">
-                <form action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST">
+                <form action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
@@ -73,6 +73,20 @@
                             <option value="Chalet">Chalet</option>
                         </select>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Città<span class="text-danger">*</span></label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="city"
+                            name="city"
+                            required
+                            maxlength="255"
+                            value="{{ old('city', $apartment->city) }}" 
+                            placeholder="Inserisci la città...">
+                    </div>
+
                     <div class="mb-3">
                         <label for="address" class="form-label">Indirizzo<span class="text-danger">*</span></label>
                         <input 
@@ -85,7 +99,7 @@
                             value="{{ old('address', $apartment->address) }}" 
                             placeholder="Inserisci l'indirizzo dell'appartamento'...">
                     </div>
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="long" class="form-label">Longitudine<span class="text-danger">*</span></label>
                         <input 
                             type="number" 
@@ -106,7 +120,7 @@
                             required
                             value="{{ old('long', $apartment->lat) }}" 
                             placeholder="Inserisci latitudine'...">
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
                         <input 
