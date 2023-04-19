@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 // Models
-use app\Models\Apartment;
+use App\Models\Apartment;
 
 class User extends Authenticatable
 {

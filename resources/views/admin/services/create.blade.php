@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 
 @section('content')
 <div class="container-fluid mt-4">
@@ -29,7 +29,7 @@
                     @csrf
 
                     {{-- Title --}}
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="name" class="form-label">Titolo*</label>
                         <input type="text" 
                             class="form-control" 
@@ -49,4 +49,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}

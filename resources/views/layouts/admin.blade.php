@@ -54,24 +54,27 @@
                                     </a>
                                 </li>
                                 
+                                {{-- appartamenti --}}
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.apartments.index' ? 'bg-secondary' : '' }}" href="{{route('admin.apartments.index')}}">
                                         <i class="fa-solid fa-house fa-lg fa-fw"></i> Apartments
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.services.index' ? 'bg-secondary' : '' }}" href="{{route('admin.services.index')}}">
                                         <i class="fa-regular fa-square-check fa-lg fa-fw"></i> Services
                                     </a>
-                                </li>
+                                </li> --}}
 
+                                {{-- messaggi --}}
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.messages.index' ? 'bg-secondary' : '' }}" href="{{route('admin.messages.index')}}">
                                         <i class="fa-regular fa-image fa-lg fa-fw"></i> Messages
                                     </a>
                                 </li>
 
+                                {{-- sponsorizzazioni --}}
                                 <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.sponsorships.index' ? 'bg-secondary' : '' }}" href="{{route('admin.sponsorships.index')}}">
                                         <i class="fa-solid fa-award fa-lg fa-fw"></i> Sponsorships

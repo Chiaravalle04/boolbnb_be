@@ -59,6 +59,16 @@
                                 Nessun servizio
                             @endif
                         </li>
+
+                        <li class="list-group-item">
+                            tipo di sponsorizzazione:
+                            <select name="sponsorship" id="">
+                                <option value="">nessuna</option>
+                                <option value="">standard</option>
+                                <option value="">plus</option>
+                                <option value="">premium</option>
+                            </select>
+                        </li>
                        
                     </ul>
                 </div>
