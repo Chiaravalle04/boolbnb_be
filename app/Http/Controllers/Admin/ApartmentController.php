@@ -91,6 +91,21 @@ class ApartmentController extends Controller
 
         }
 
+        $address = $data['address'];
+        $url = 'https://api.tomtom.com/search/2/geocode/' . urlencode($address) . '.json?key=YqMdhFbqAodquBGAGfGAfSFvrkVm0sD5';
+        $response = file_get_contents($url);
+
+        // Analizza la risposta JSON
+        $json = json_decode($response);
+        $latitude = $json->results[0]->position->lat;
+        $longitude = $json->results[0]->position->lon;
+
+        // Salva la longitudine e la latitudine nel database
+        $newApartment->update([
+            'latitude' => $latitude,
+            'longitude' => $longitude,
+        ]);
+
         return redirect()->route('admin.apartments.show', $newApartment);
     }
 

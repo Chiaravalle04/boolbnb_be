@@ -20,9 +20,10 @@ return new class extends Migration
             $table->text('description');
             $table->string('cover');
             $table->string('type');
+            $table->string('city');
             $table->string('address');
-            $table->double('long', 10, 7);
-            $table->double('lat', 10, 7);
+            $table->double('latitude', 10, 7)->default(0.0);
+            $table->double('longitude', 10, 7)->default(0.0);
             $table->decimal('price', $precision = 8, $scale = 2)->unsigned();
             $table->boolean('availability');
             $table->tinyInteger('room')->unsigned();

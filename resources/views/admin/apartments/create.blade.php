@@ -44,15 +44,6 @@
                         >
                     </div>
 
-                    <div class="mb-3 d-none">
-                        <label for="user_id" class="form-label"></label>
-                        <input type="number" 
-                            class="form-control" 
-                            id="user_id" 
-                            name="user_id"
-                        >
-                    </div>
-
                     {{-- Description --}}
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione*</label>
@@ -90,6 +81,20 @@
                         </select>
                     </div>
 
+                    {{-- City --}}
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Città</label>
+                        <input type="text" 
+                            class="form-control" 
+                            id="city" 
+                            name="city"
+                            value="{{ old('city') }}"
+                            placeholder="Inserisci la città..."
+                            required
+                            maxlength="255"
+                        >
+                    </div>
+
                     {{-- Address --}}
                     <div class="mb-3">
                         <label for="address" class="form-label">Indirizzo</label>
@@ -101,32 +106,6 @@
                             placeholder="Inserisci l'indirizzo..."
                             required
                             maxlength="255"
-                        >
-                    </div>
-
-                    {{-- Longituidine --}}
-                    <div class="mb-3">
-                        <label for="long" class="form-label">Longituidine</label>
-                        <input type="number" 
-                            id="long" 
-                            class="form-control"
-                            name="long"
-                            value="{{ old('long') }}"
-                            required
-                            step="any"
-                        >
-                    </div>
-
-                    {{-- Latitudine --}}
-                    <div class="mb-3">
-                        <label for="lat" class="form-label">Latitudine</label>
-                        <input type="number" 
-                            id="lat" 
-                            class="form-control"
-                            name="lat"
-                            value="{{ old('lat') }}"
-                            required
-                            step="any"
                         >
                     </div>
 
