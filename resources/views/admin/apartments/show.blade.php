@@ -7,7 +7,7 @@
         <div class="col">
 
             <div class="col">
-                <img src="{{ $apartment->cover }}" class="card-img-top" style="height:350px; object-fit:cover" alt="...">
+                <img src="{{ asset('storage/'.$apartment->cover) }}" class="card-img-top" style="height:350px; object-fit:cover" alt="...">
                 <div class="card mb-5">
                     <div class="card-body">
                       <h5 class="card-title">{{ $apartment->title }}</h5>

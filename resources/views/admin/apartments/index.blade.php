@@ -26,7 +26,7 @@
             @foreach ($apartments as $apartment)
             <div class="col-3 mb-5">
                 <div class="card h-100">
-                    <img src="{{ $apartment->cover }}" class="card-img-top" alt="...">
+                    <img src="{{ asset('storage/'.$apartment->cover) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{ $apartment->title }}</h5>
                       <p class="card-text">{{ $apartment->address }}</p>
