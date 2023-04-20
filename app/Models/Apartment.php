@@ -25,7 +25,6 @@ class Apartment extends Model
         'cover',
         'type',
         'address',
-        'city',
         'latitude',
         'longitude',
         'price',

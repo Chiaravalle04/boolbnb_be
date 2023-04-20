@@ -81,20 +81,6 @@
                         </select>
                     </div>
 
-                    {{-- City --}}
-                    <div class="mb-3">
-                        <label for="city" class="form-label">Città<span class="text-danger">*</span></label>
-                        <input type="text" 
-                            class="form-control" 
-                            id="city" 
-                            name="city"
-                            value="{{ old('city') }}"
-                            placeholder="Inserisci la città..."
-                            required
-                            maxlength="255"
-                        >
-                    </div>
-
                     {{-- Address --}}
                     <div class="mb-3">
                         <label for="address" class="form-label">Indirizzo<span class="text-danger">*</span></label>

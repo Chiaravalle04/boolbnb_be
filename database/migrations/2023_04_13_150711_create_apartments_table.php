@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('description');
             $table->string('cover');
             $table->string('type');
-            $table->string('city');
             $table->string('address');
             $table->double('latitude', 10, 7)->default(0.0);
             $table->double('longitude', 10, 7)->default(0.0);
