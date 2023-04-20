@@ -173,11 +173,11 @@
 
                             {{-- Services --}}
                             <div class="mb-3">
-                                <label class="form-label @error('visibility') text-danger @enderror">Servizi</label>
+                                <label class="form-label @error('services') text-danger @enderror">Servizi</label>
                                 @foreach ($services as $service)
                                     <div class="form-check">
                                         <input
-                                            class="form-check-input @error('visibility') border border-3 border-danger @enderror"
+                                            class="form-check-input @error('services') border border-3 border-danger @enderror"
                                             name="services[]"
                                             type="checkbox"
                                             id="tag-{{ $service->id }}"
