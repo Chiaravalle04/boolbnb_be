@@ -120,6 +120,12 @@ class ApartmentController extends Controller
         $services = $apartment->services;
         $sponsorships = $apartment->sponsorships;
 
+        if ($apartment->user_id !== Auth::user()->id) {
+
+            abort(403, 'Cosa cazzo vuoi fare?');
+        
+        }
+
         return view('admin.apartments.show', compact('apartment', 'services', 'sponsorships'));
     }
 
@@ -131,6 +137,12 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
+        if ($apartment->user_id !== Auth::user()->id) {
+
+            abort(403, 'Cosa cazzo vuoi fare?');
+        
+        }
+
         $services = Service::all();
 
         return view('admin.apartments.edit', compact('apartment', 'services'));

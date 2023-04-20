@@ -70,9 +70,13 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
-        $messages = Message::all();
-
         $apartments = Apartment::all();
+
+        if ($message->apartment->user_id !== Auth::user()->id) {
+
+            abort(403, 'Cosa cazzo vuoi fare?');
+        
+        }
 
         return view('admin.messages.show', compact('message', 'apartments'));
     }
