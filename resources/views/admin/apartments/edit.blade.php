@@ -7,24 +7,9 @@
                 <div class="card">
                     <div class="card-header">{{ __('Modifica appartamento') }}</div>
                 
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                    <!-- errori e successo -->
+                    @include('partials.errorSuccess')
 
-                        <div class="card">
-                            @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                            @endif
-                        </div>
-            
         
                         <form class="p-4" action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
