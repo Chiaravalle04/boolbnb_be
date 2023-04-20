@@ -7,23 +7,8 @@
             <div class="card">
                 <div class="card-header">{{ __('Aggiungi appartamento') }}</div>
 
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
-                <div class="card">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-                </div>
+                <!-- errori e successo -->
+                @include('partials.errorSuccess')
 
                 <form class="p-4" action="{{ route('admin.apartments.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -32,9 +17,9 @@
 
                     {{-- Title --}}
                     <div class="mb-3">
-                        <label for="title" class="form-label">Titolo<span class="text-danger">*</span></label>
+                        <label for="title" class="form-label @error('title') text-danger @enderror">Titolo<span class="text-danger">*</span></label>
                         <input type="text" 
-                            class="form-control" 
+                            class="form-control @error('title') border border-3 border-danger @enderror" 
                             id="title" 
                             name="title"
                             value="{{ old('title') }}"
@@ -46,9 +31,9 @@
 
                     {{-- Description --}}
                     <div class="mb-3">
-                        <label for="description" class="form-label">Descrizione<span class="text-danger">*</span></label>
+                        <label for="description" class="form-label @error('description') text-danger @enderror">Descrizione<span class="text-danger">*</span></label>
                         <textarea 
-                            class="form-control" 
+                            class="form-control @error('description') border border-3 border-danger @enderror" 
                             id="description" 
                             name="description"
                             rows="3" 
@@ -58,10 +43,10 @@
                     </div>
 
                     {{-- Cover --}}
-                   <div class="mb-3">
-                        <label for="cover" class="form-label">Inserisci cover<span class="text-danger">*</span></label>                     
+                    <div class="mb-3">
+                        <label for="cover" class="form-label @error('cover') text-danger @enderror">Inserisci cover<span class="text-danger">*</span></label>                     
                         <input type="file" 
-                            class="form-control" 
+                            class="form-control @error('cover') border border-3 border-danger @enderror" 
                             id="cover" 
                             name="cover"
                             accept="image/*"
@@ -71,8 +56,8 @@
 
                     {{-- Type --}}
                     <div class="mb-3">
-                        <label for="type" class="form-label">Tipo di struttura<span class="text-danger">*</span></label>                     
-                        <select class="form-select" name="type" aria-label="Default select example" required>
+                        <label for="type" class="form-label @error('type') text-danger @enderror">Tipo di struttura<span class="text-danger">*</span></label>                     
+                        <select class="form-select @error('type') border border-3 border-danger @enderror" name="type" aria-label="Default select example" required>
                             <option value="Appartamento">Appartamento</option>
                             <option value="Stanza">Stanza</option>
                             <option value="Hotel">Hotel</option>
@@ -83,9 +68,9 @@
 
                     {{-- Address --}}
                     <div class="mb-3">
-                        <label for="address" class="form-label">Indirizzo<span class="text-danger">*</span></label>
+                        <label for="address" class="form-label @error('type') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
                         <div class="form-outline w-100">
-                            <input type="text" class="form-control" id="address" placeholder="Insert address" name="address"
+                            <input type="text" class="form-control @error('type') border border-3 border-danger @enderror" id="address" placeholder="Insert address" name="address"
                         value="{{ old('address') }}" required>
                         </div>
                         <ul id="autocomplete-list" class="list-group"></ul>
@@ -102,10 +87,10 @@
 
                     {{-- Price --}}
                     <div class="mb-3">
-                        <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
+                        <label for="price" class="form-label @error('price') text-danger @enderror">Prezzo<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="price" 
-                            class="form-control"
+                            class="form-control @error('price') border border-3 border-danger @enderror"
                             name="price"
                             value="{{ old('price') }}"
                             required
@@ -115,8 +100,8 @@
 
                     {{-- Availability --}}
                     <div class="mb-3">
-                        <label for="availability" class="form-label">Disponibilità<span class="text-danger">*</span></label>                     
-                        <select class="form-select" name="availability" aria-label="Default select example" required>
+                        <label for="availability" class="form-label @error('availability') text-danger @enderror">Disponibilità<span class="text-danger">*</span></label>                     
+                        <select class="form-select @error('availability') border border-3 border-danger @enderror" name="availability" aria-label="Default select example" required>
                             <option value="0">No</option>
                             <option value="1">Si</option>
                         </select>
@@ -124,10 +109,10 @@
 
                     {{-- Room --}}
                     <div class="mb-3">
-                        <label for="room" class="form-label">Numero di stanze<span class="text-danger">*</span></label>
+                        <label for="room" class="form-label @error('room') text-danger @enderror">Numero di stanze<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="room" 
-                            class="form-control"
+                            class="form-control @error('room') border border-3 border-danger @enderror"
                             name="room"
                             value="{{ old('room') }}"
                             required
@@ -136,10 +121,10 @@
 
                     {{-- Bed --}}
                     <div class="mb-3">
-                        <label for="bed" class="form-label">Numero di letti<span class="text-danger">*</span></label>
+                        <label for="bed" class="form-label @error('bed') text-danger @enderror">Numero di letti<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="bed" 
-                            class="form-control"
+                            class="form-control @error('bed') border border-3 border-danger @enderror"
                             name="bed"
                             value="{{ old('bed') }}"
                             required
@@ -148,10 +133,10 @@
 
                     {{-- Bathroom --}}
                     <div class="mb-3">
-                        <label for="bathroom" class="form-label">Numero di bagni<span class="text-danger">*</span></label>
+                        <label for="bathroom" class="form-label @error('bathroom') text-danger @enderror">Numero di bagni<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="bathroom" 
-                            class="form-control"
+                            class="form-control @error('bathroom') border border-3 border-danger @enderror"
                             name="bathroom"
                             value="{{ old('bathroom') }}"
                             required
@@ -160,10 +145,10 @@
 
                     {{-- Square meters --}}
                     <div class="mb-3">
-                        <label for="square_meters" class="form-label">Metri quadrati<span class="text-danger">*</span></label>
+                        <label for="square_meters" class="form-label @error('square_meters') text-danger @enderror">Metri quadrati<span class="text-danger">*</span></label>
                         <input type="number" 
                             id="square_meters" 
-                            class="form-control"
+                            class="form-control @error('square_meters') border border-3 border-danger @enderror"
                             name="square_meters"
                             value="{{ old('square_meters') }}"
                             required
@@ -172,8 +157,8 @@
 
                     {{-- Visibility --}}
                     <div class="mb-3">
-                        <label for="visibility" class="form-label">Visibile<span class="text-danger">*</span></label>                     
-                        <select class="form-select" name="visibility" aria-label="Default select example" required>
+                        <label for="visibility" class="form-label @error('visibility') text-danger @enderror">Visibile<span class="text-danger">*</span></label>                     
+                        <select class="form-select @error('visibility') border border-3 border-danger @enderror" name="visibility" aria-label="Default select example" required>
                             <option value="0">No</option>
                             <option value="1">Si</option>
                         </select>
@@ -181,11 +166,11 @@
 
                     {{-- Services --}}
                     <div class="mb-3">
-                        <label class="form-label">Servizi</label>
+                        <label class="form-label @error('services') text-danger @enderror">Servizi</label>
                         @foreach ($services as $service)
                             <div class="form-check">
                                 <input
-                                    class="form-check-input"
+                                    class="form-check-input @error('services') border border-3 border-danger @enderror"
                                     name="services[]"
                                     type="checkbox"
                                     id="tag-{{ $service->id }}"
