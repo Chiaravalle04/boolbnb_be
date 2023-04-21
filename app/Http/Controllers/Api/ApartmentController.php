@@ -39,7 +39,12 @@ class ApartmentController extends Controller
             ->when($request->input('bed'), function ($query, $bed) {
                 $query->where('bed', '>=', $bed);
             })
-
+            ->when($request->input('bathroom'), function ($query, $bathroom) {
+                $query->where('bathroom', '>=', $bathroom);
+            })
+            ->when($request->input('price'), function ($query, $price) {
+                $query->where('price', '>=', $price);
+            })
             ->when($request->input('room'), function ($query, $room) {
                 $query->where('room', '>=', $room);
             })
