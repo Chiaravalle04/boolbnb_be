@@ -8,6 +8,7 @@ use Exception;
 
 // Models
 use App\Models\Apartment;
+use App\Models\Service;
 
 class ApartmentController extends Controller
 {
@@ -16,15 +17,46 @@ class ApartmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $apartments = Apartment::with('user')->get();
+        // $apartments = Apartment::with('user', 'services')->get();
+
+        // return response()->json([
+        //     'success' => true,
+        //     'message' => 'Ok',
+        //     'code' => 200,
+        //     'apartments' => $apartments,
+        // ]);
+
+        $data = Apartment::with('services')
+            // condition when(boolean, callback function) to filter services only if requested
+            ->when($request->input('services'), function ($query, $services) {
+                $query->whereHas('services', function ($query) use ($services) {
+                    // whereIn per ottenere gli appartamenti che hanno tutti i servizi richiesti
+                    $query->whereIn('name', $services);
+                }, '=', count($services));
+            })
+            ->when($request->input('bed'), function ($query, $bed) {
+                $query->where('bed', '>=', $bed);
+            })
+
+            ->when($request->input('room'), function ($query, $room) {
+                $query->where('room', '>=', $room);
+            })
+            // ->where('is_visible', true)
+            // ->whereDoesntHave('sponsorships', function ($query) {
+            //     $query->where('ending_date', '>', now());
+            // })
+
+            // TODO orderBy title for now
+            // ->orderBy('title', 'asc')
+            ->get();
 
         return response()->json([
             'success' => true,
-            'message' => 'Ok',
-            'code' => 200,
-            'apartments' => $apartments,
+            'results' => [
+                'apartments' => $data,
+            ]
         ]);
     }
 
