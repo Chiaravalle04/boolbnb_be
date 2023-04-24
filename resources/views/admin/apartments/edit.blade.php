@@ -63,7 +63,26 @@
                                 </select>
                             </div>
 
+                            {{-- Address --}}
                             <div class="mb-3">
+                                <label for="address" class="form-label @error('type') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
+                                <div class="form-outline w-100">
+                                    <input type="text" class="form-control @error('type') border border-3 border-danger @enderror" id="address" placeholder="Insert address" name="address"
+                                value="{{ old('address') }}" required>
+                                </div>
+                                <ul id="autocomplete-list" class="list-group"></ul>
+                                {{-- <input type="text" 
+                                    class="form-control" 
+                                    id="address" 
+                                    name="address"
+                                    value="{{ old('address') }}"
+                                    placeholder="Inserisci l'indirizzo..."
+                                    required
+                                    maxlength="255"
+                                > --}}
+                            </div>
+
+                            {{-- <div class="mb-3">
                                 <label for="address" class="form-label @error('address') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
                                 <input 
                                     type="text" 
@@ -74,7 +93,7 @@
                                     maxlength="255"
                                     value="{{ old('address', $apartment->address) }}" 
                                     placeholder="Inserisci l'indirizzo dell'appartamento'...">
-                            </div>
+                            </div> --}}
                             {{-- <div class="mb-3">
                                 <label for="long" class="form-label">Longitudine<span class="text-danger">*</span></label>
                                 <input 
