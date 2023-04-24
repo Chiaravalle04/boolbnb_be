@@ -36,6 +36,9 @@ class ApartmentController extends Controller
                     $query->whereIn('name', $services);
                 }, '=', count($services));
             })
+            ->when($request->input('type'), function ($query, $type) {
+                $query->where('type', '=', $type);
+            })
             ->when($request->input('bed'), function ($query, $bed) {
                 $query->where('bed', '>=', $bed);
             })
@@ -43,7 +46,7 @@ class ApartmentController extends Controller
                 $query->where('bathroom', '>=', $bathroom);
             })
             ->when($request->input('price'), function ($query, $price) {
-                $query->where('price', '>=', $price);
+                $query->where('price', '<=', $price);
             })
             ->when($request->input('room'), function ($query, $room) {
                 $query->where('room', '>=', $room);
