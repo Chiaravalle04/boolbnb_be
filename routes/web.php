@@ -34,9 +34,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
     Route::resource('messages', MessageController::class);
     Route::resource('services', ServiceController::class);
 
-    Route::get('/apartments/{apartment}/sponsorships', [SponsorshipController::class, 'index']);
-    Route::get('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'checkout']);
-    Route::post('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'store']);
+    Route::get('/apartments/{apartment}/sponsorships', [SponsorshipController::class, 'index'])->name('sponsorships.index');
+    Route::get('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'checkout'])->name('sponsorships.checkout');
+    Route::post('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'store'])->name('sponsorships.store');
     
     Route::resource('images', ImageController::class);
     Route::resource('views', ViewController::class);

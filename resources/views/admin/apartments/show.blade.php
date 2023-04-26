@@ -47,7 +47,6 @@
                         </li>
                         <li class="list-group-item">{{ $apartment->square_meters }} m²</li>
                         <li class="list-group-item">
-
                             @if (count($apartment->services) > 0)
                                 @foreach ($apartment->services as $service)
                                     <div>
@@ -59,17 +58,11 @@
                                 Nessun servizio
                             @endif
                         </li>
-
-                        <li class="list-group-item">
-                            tipo di sponsorizzazione:
-                            <select name="sponsorship" id="">
-                                <option value="">nessuna</option>
-                                <option value="">standard</option>
-                                <option value="">plus</option>
-                                <option value="">premium</option>
-                            </select>
+                        <li>
+                            <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn btn-success text-light">
+                                Sponsorizza
+                            </a>
                         </li>
-                       
                     </ul>
                 </div>
             </div>
@@ -95,9 +88,17 @@
                     Elimina
                 </button>
                 </form>
+                {{-- @foreach ($sponsorships as $sponsorship)
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div class="p-3 border rounded-3">
+                            <h5>Sponsorship level: <span class="fw-bold">{{$sponsorship->name}}</span></h5> 
+                            <p>Price: {{$sponsorship->price}} €</p>
+                            <a class="btn my-btn fw-bold py-2" href="{{ route('admin.sponsorships.checkout', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}">Select</a>
+                        </div>
+                    </div>
+                @endforeach --}}
             </div>
         </div>
     </div>
 </div>
-
 @endsection
