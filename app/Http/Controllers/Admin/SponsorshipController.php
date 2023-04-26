@@ -17,11 +17,21 @@ class SponsorshipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Apartment $apartment)
     {
+        $apartment = Apartment::findOrFail($apartment->id);
         $sponsorships = Sponsorship::all();
 
-        return view('admin.sponsorships.index', compact('sponsorships'));
+        //dd($sponsorships);
+        return view('admin.sponsorships.index', compact('apartment', 'sponsorships'));
+    }
+
+    public function checkout(Apartment $apartment, Sponsorship $sponsorship)
+    {
+        $apartment = Apartment::findOrFail($apartment->id);
+        $sponsorship = Sponsorship::findOrFail($sponsorship->id);
+        //dd($sponsorships);
+        return view('admin.sponsorships.checkout', compact('apartment', 'sponsorship'));
     }
 
     /**
@@ -40,14 +50,19 @@ class SponsorshipController extends Controller
      * @param  \App\Http\Requests\StoreSponsorshipRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSponsorshipRequest $request)
+    public function store(Apartment $apartment, Sponsorship $sponsorship)
     {
-        $data = $request->validated();
+        $apartment = Apartment::findOrFail($apartment->id);
 
-        $newSponsorship = Sponsorship::create($data);
+        // Recupera la sponsorizzazione utilizzando l'id
+        $sponsorship = Sponsorship::findOrFail($sponsorship->id);
 
-        return redirect()->route('admin.sponsorships.show', $newSponsorship);
+        // Salva la relazione many-to-many nella tabella pivot
+        $apartment->sponsorships()->attach($sponsorship, [
+            'expired_date' => now()->addHours($sponsorship->duration)
+        ]);
 
+        return redirect()->route('admin.apartments.show', $apartment->id)->with('message', "Your $sponsorship->name sponsorship is active now!");
     }
 
     /**
@@ -58,9 +73,9 @@ class SponsorshipController extends Controller
      */
     public function show(Sponsorship $sponsorship)
     {
-        $apartments = $sponsorship->apartments;
+        // $apartments = $sponsorship->apartments;
 
-        return view('admin.sponsorships.show', compact('sponsorship', 'apartments'));
+        // return view('admin.sponsorships.show', compact('sponsorship', 'apartments'));
     }
 
     /**

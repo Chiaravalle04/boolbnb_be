@@ -75,11 +75,11 @@
                                 </li>
 
                                 {{-- sponsorizzazioni --}}
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.sponsorships.index' ? 'bg-secondary' : '' }}" href="{{route('admin.sponsorships.index')}}">
                                         <i class="fa-solid fa-award fa-lg fa-fw"></i> Sponsorships
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
 
 

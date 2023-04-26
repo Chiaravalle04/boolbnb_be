@@ -33,7 +33,11 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(
     Route::resource('apartments', ApartmentController::class);
     Route::resource('messages', MessageController::class);
     Route::resource('services', ServiceController::class);
-    Route::resource('sponsorships', SponsorshipController::class);
+
+    Route::get('/apartments/{apartment}/sponsorships', [SponsorshipController::class, 'index']);
+    Route::get('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'checkout']);
+    Route::post('/apartments/{apartment}/sponsorships/{sponsorship}', [SponsorshipController::class, 'store']);
+    
     Route::resource('images', ImageController::class);
     Route::resource('views', ViewController::class);
 

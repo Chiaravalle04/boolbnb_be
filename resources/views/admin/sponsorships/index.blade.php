@@ -27,11 +27,11 @@
                 @else
                     <td>NULL</td>
                 @endif --}}
-                <td>
+                {{-- <td>
                     <a href="{{ route('admin.sponsorships.show', $sponsorship->id) }}" class="btn btn-outline-primary border">
                         visualizza
                     </a>
-                </td>
+                </td> --}}
             </tr>
           @endforeach
         </tbody>
