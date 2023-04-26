@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Controller
 use App\Http\Controllers\Api\ApartmentController;
 use App\Http\Controllers\Api\ServiceController;
-
+use App\Http\Controllers\Api\ViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +32,11 @@ Route::name('api.')->group(function () {
 Route::name('api.')->group(function () {
 
     Route::resource('services', ServiceController::class)->only(['index']);
+
+});
+
+Route::name('api.')->group(function () {
+
+    Route::resource('views', ViewController::class)->only(['store']);
 
 });

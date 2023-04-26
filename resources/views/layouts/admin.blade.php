@@ -20,6 +20,7 @@
         <!-- Usando Vite -->
         @vite(['resources/js/app.js'])
         <script src="https://js.braintreegateway.com/web/dropin/1.36.1/js/dropin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
