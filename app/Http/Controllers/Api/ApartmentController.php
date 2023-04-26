@@ -99,7 +99,7 @@ class ApartmentController extends Controller
     {
         try {
 
-            $apartments = Apartment::where('slug', $slug)->with('user')->firstOrFail();
+            $apartments = Apartment::where('slug', $slug)->with('user', 'services')->firstOrFail();
 
             return response()->json([
                 'success' => true,
