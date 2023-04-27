@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApartmentController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\ViewController;
+use App\Http\Controllers\Api\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,11 @@ Route::name('api.')->group(function () {
 Route::name('api.')->group(function () {
 
     Route::resource('views', ViewController::class)->only(['store']);
+
+});
+
+Route::name('api.')->group(function () {
+
+    Route::resource('messages', MessageController::class)->only(['store']);
 
 });

@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
-// Models
-use App\Models\View;
-
-class ViewController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,21 +35,23 @@ class ViewController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
         $apartment_id = $request->get('apartment_id');
-        $user_ip = $request->getClientIp();
-        $viewed_at = $request->get('viewed_at');
+        $name = $request->get('name');
+        $email = $request->get('email');
+        $messageText = $request->get('message');
 
-        $views = new View();
-        $views->apartment_id = $apartment_id;
-        $views->user_ip = $user_ip;
-        $views->viewed_at = $viewed_at;
-        $views->save();
+        $message = new Message();
+        $message->apartment_id = $apartment_id;
+        $message->name = $name;
+        $message->email = $email;
+        $message->message = $messageText;
+        $message->save();
 
         return response()->json([
             'status' => 'success',
-            'message' => 'views created successfully',
-            'data' => $views
+            'message' => 'message created successfully',
+            'data' => $message
         ]);
     }
 
