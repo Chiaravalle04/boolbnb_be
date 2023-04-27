@@ -24,7 +24,7 @@ use App\Http\Controllers\Admin\ViewController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
