@@ -28,7 +28,7 @@ class ApartmentController extends Controller
         //     'apartments' => $apartments,
         // ]);
 
-        $data = Apartment::with('services')
+        $data = Apartment::with('services', 'sponsorships')
             // condition when(boolean, callback function) to filter services only if requested
             ->when($request->input('services'), function ($query, $services) {
                 $query->whereHas('services', function ($query) use ($services) {
