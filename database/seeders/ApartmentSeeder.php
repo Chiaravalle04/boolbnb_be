@@ -21,9 +21,6 @@ class ApartmentSeeder extends Seeder
     public function run()
     
     {
-        
-    
-
         $apartments = [
             [
                 'title' => 'Casa Petra',
@@ -86,6 +83,7 @@ class ApartmentSeeder extends Seeder
                                 - la cucina è disposta lungo la parete laterale e perfettamente attrezzata
                                 - la camera da letto è matrimoniale e separata dal soggiorno
                                 - il bagno ha un disimpegno con lavatrice",
+                'price' => 49,
                 'availability' => true,
                 'cover' => 'apartments/casa-brera.jpeg',
                 'type' => 'Stanza',
