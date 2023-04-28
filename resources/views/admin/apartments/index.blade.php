@@ -12,14 +12,18 @@
 
         <div class="card_index_apartments">
 
-            <div class="image_apartment">
-                <img src="{{ asset('storage/'.$apartment->cover) }}" class="card-img-top" alt="...">
-            </div>
+            <a class="link_show_apartment" href="{{ route('admin.apartments.show', $apartment->id)}}">
 
-            <div class="text_single_apartment">
-                <h5 class="card-title">{{ $apartment->title }}</h5>
-                <p class="card-text">{{ $apartment->address }}</p>
-            </div>
+                <div class="image_apartment">
+                    <img src="{{ asset('storage/'.$apartment->cover) }}" class="card-img-top" alt="...">
+                </div>
+
+                <div class="text_single_apartment">
+                    <h5 class="card-title">{{ $apartment->title }}</h5>
+                    <p class="card-text">{{ $apartment->address }}</p>
+                </div>
+
+            </a>
 
         </div>
 
