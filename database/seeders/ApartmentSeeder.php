@@ -201,60 +201,65 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Sea view apartment',
-                'description' => "Delightful 50m2 one bedroom apartment with private terrace and panoramic view of the city. The apartment is located on the fourth floor of a historic building in the heart of the historic centre, a few steps from the main monuments and museums of the city. The apartment has been recently renovated and tastefully furnished, maintaining the original features of the building, such as the exposed wooden beams and the terracotta floor. The apartment consists of a living room with fully equipped kitchenette, a double bedroom and a modern bathroom with shower. The living room leads directly to the private terrace, equipped with table, chairs and deck chairs, ideal for enjoying the view over the city and relaxing in the sun. The apartment is equipped with air conditioning, flat screen TV, washing machine, hairdryer and high speed Wi-Fi connection. The location of the apartment is ideal for discovering the charm of the city on foot, strolling through the narrow streets of the historic center and savoring the local cuisine in the numerous restaurants and trattorias in the area. An unforgettable experience for those who want to experience the city in an authentic and romantic way.",
+                'title' => 'Casa Montebello con bel panorama',
+                'description' => "Piccolo appartamento a due passi dal lungomare e dal centro situato in  zona residenziale molto tranquilla e silenziosa, ciò che fa la differenza è una bella vista e la mia disponibilità a fornirvi tutte le informazioni necessarie per trascorrere un buon soggiorno nella città.
+                Comodo anche per chi deve imbarcarsi (5 minuti dal porto)",
                 'price' => 63,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/livorno-casa.jpg',
                 'type' => 'Stanza',
                 'latitude' => '43.7384',
                 'longitude' => '10.4514',
                 'address' => 'Via della Spiaggia 8, Livorno',
-                'room' => 4,
+                'room' => 2,
                 'bed' => 2,
                 'bathroom' => 1,
-                'square_meters' => 80,
+                'square_meters' => 60,
                 'visibility' => true
             ],
             [
-                'title' => 'Elegant house in Tortona area',
-                'description' => "Elegant and refined apartment in the heart of Via Savona, one of the most fashionable and trendy areas of Milan, characterized by stores, trendy clubs, art galleries and restaurants with Italian and international cuisine. Opposite Mudec, a stone's throw from the Navigli and a few minutes from the Duomo, you'll be staying in a typical Milanese house, you'll be in the heart of the city, in one of the most served, vibrant and cosmopolitan areas of all Milan.",
+                'title' => 'Design District- Navigli',
+                'description' => "Apartment Milano Via Tortona, è un mini appartamento per due persone con letto matrimoniale , cucina attrezzata a vista.
+                                    E' situata all'interno di un palazzo in Via Tortona, con accesso anche da Via Savona tramite il giardino condominiale.
+                                    La camera, dotata di Smart TV a schermo piatto , wi-FI gratuito, bagno privato completo di doccia, set di asciugamani e asciugacapelli, offre in cucina una macchina da caffè ,snack per la colazione , piatti e bicchieri.",
                 'price' => 132,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/tortona-milano.jpg',
                 'type' => 'Villa',
                 'latitude' => '45.452076',
                 'longitude' => '9.163807',
                 'address' => 'Via Tortona 27, Milano',
-                'room' => 5,
-                'bed' => 4,
+                'room' => 2,
+                'bed' => 1,
                 'bathroom' => 2,
-                'square_meters' => 95,
+                'square_meters' => 30,
                 'visibility' => true
             ],
             [
-                'title' => 'PoP Studio,tiny and cute-few minutes by Navigli',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Moro Canal Grande - Navigli',
+                'description' => "Meraviglioso monolocale di circa 40Mq appena ristrutturato, con wifi e aria condizionata, posto al terzo piano di uno stabile di ringhiera della vecchia Milano a due passi della fermata del Bus 90. Si compone di:
+                                    - un luminoso soggiorno con cucina a vista completamente accessoriata, dotata di piano cottura ad induzione, frigorifero con congelatore, lavastoviglie, forno elettrico, Macchina del Caffè e bollitore Thé. Presente tavolo da pranzo per quattro persone, una zona Notte con comodo letto matrimoniale e Smart Tv da 43, un Bagno dotato di tutti i servizi essenziali, box doccia, Bidet, Wc e phon",
                 'price' => 132,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/canal-grande.jpeg',
                 'type' => 'Stanza',
                 'latitude' => '45.4448622',
                 'longitude' => '9.143070',
                 'address' => 'Via Lodovico il Moro, Milano',
-                'room' => 5,
-                'bed' => 4,
-                'bathroom' => 2,
-                'square_meters' => 95,
+                'room' => 2,
+                'bed' => 1,
+                'bathroom' => 1,
+                'square_meters' => 40,
                 'visibility' => true
             ],
 
             [
-                'title' => 'Casa test Roma 2',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Arancio Apartments N° 9',
+                'description' => "Situato sulla cima di un edificio che si trova in Via Anicia, questo accogliente appartamento ha una vista unica sui tetti di Roma. L'appartamento dispone di: angolo cottura, bagno con vasca, zona giorno con tv, a/c, riscaldamento e wi-fi. La terrazza di 20 mq offre l'ambiente ideale per una colazione o un pranzo all'aperto.
+                L'edificio dispone di un piccolo ascensore che porta al 4 piano, di qui una scala a chiocciola conduce all'ultimo piano dove si trova l'appartamento.",
                 'price' => 48,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/arancio-roma.jpg',
                 'type' => 'Stanza',
                 'latitude' => '41.88634980451772',
                 'longitude' => '12.474584130570012',
@@ -266,11 +271,26 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Firenze',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Casa di campagna in Mugello',
+                'description' => "Entrata indipendente, posto auto. Il cucinotto è dotato di tutto il necessario per cucinare.. olio sale e pepe
+                                    Questo alloggio è una casa non un albergo...
+                                    
+                                    Giardino con gazebo e barbecue per deliziosi pranzi all'aperto. Nel periodo estivo frutta e verdura di stagione nell'orto riservato alla casa.
+                                    
+                                    Sempre a disposizione per qualsiasi informazione e consiglio.
+                                    
+                                    Tanta tranquillità e tanta natura a 360 gradi.
+                                    
+                                    In soli 35 minuti col treno si raggiunge Firenze con la possibilità di portarsi dietro le bici e girare la città in piena libertà.
+                                    Via degli Dei: possibilità di navetta.
+                                    Nel Mugello potete sbizzarrirvi a girovagare con le bici o a piedi lungo la pista ciclabile o nei sentieri trekking anche la frequentata Via degli Dei
+                                    Visitare fattorie e acquistare prodotti tipici.
+                                    Autodromo del Mugello a pochissimi km e il lago di Bilancino dove è possibile fare il bagno.
+                                    Accesso per gli ospiti
+                                    Gli ospiti potranno usufruire del giardino, del gazebo, del barbecue.",
                 'price' => 110,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/firenze-villa.jpg',
                 'type' => 'Villa',
                 'latitude' => '43.77182301189951',
                 'longitude' => '11.256586539272428',
@@ -282,75 +302,86 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Firenze 2',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Residenza Quartieri Storici - 4 guests suite',
+                'description' => "5 eleganti e spaziose suites appena realizzate all interno di un grande appartamento situato al primo piano di un palazzo storico fiorentino, a pochi passi dal Duomo
+                                    le suites dispongono di bagno privato tv frigobar bollitore guardaroba cassaforte linea cortesia bagno biancheria wifi e un innovativo sistema domotico che controlla luce riscaldamento accesso in struttura e ingresso in camera
+                                    possibilità di self check in attraverso codici e applicazione Bluetooth
+                                    colazione su richiesta",
                 'price' => 290,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/Residenza-Quartieri-Storici-Suites-Florence-Exterior.jpeg',
                 'type' => 'Hotel',
                 'latitude' => '43.774780762663625',
                 'longitude' => '11.252080025776955',
                 'address' => 'Via del Giglio, 53R, 50123 Firenze FI',
-                'room' => 7,
-                'bed' => 14,
+                'room' => 5,
+                'bed' => 5,
                 'bathroom' => 7,
                 'square_meters' => 561,
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Palermo',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Kantuni b&b nel cuore del centro storico',
+                'description' => "Il Kantuni è una piccola struttura a conduzione familiare che può ospitare un numero massimo di tre persone, quindi ideale per famiglie o gruppi di amici, ma anche per coppie o persone che viaggiano da sole.
+                                    L'appartamento è composto da una camera da letto, (singola/doppia/tripla), da una sala breakfast/living e da un bagno.
+                                    La camera è dotata di tutti i comfort: riscaldamento centralizzato, climatizzatore, smart TV 32'' e connessione internet free-wifi.
+                                    La sala breakfast è dotata di macchina per espresso, bollitore, distributore di acqua fresca, e frigorifero.",
                 'price' => 33,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-palermo.jpeg',
                 'type' => 'Stanza',
                 'latitude' => '38.11691600901651',
                 'longitude' => '13.360878723719031',
                 'address' => 'Via Maqueda, 90133 Palermo PA',
-                'room' => 1,
-                'bed' => 1,
-                'bathroom' => 1,
+                'room' => 3,
+                'bed' => 4,
+                'bathroom' => 4,
                 'square_meters' => 45,
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Palermo2',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Agriturismo Case Tabarani Ginestra',
+                'description' => "Il mio alloggio è vicino al Parco delle Madonie. Ti piacerà il mio alloggio per questi motivi: la luce, la cucina, i soffitti alti, il panorama, il silenzio. Il mio alloggio è adatto a coppie, chi viaggia per lavoro, famiglie (con bambini) e amici pelosi (animali domestici).
+                                    Le Case Tabarani sono quasi in cima a una collina, da esse si gode una vista panoramica amplissima dal mar Tirreno alle cime montane delle Madonie. Per la particolare posizione rispetto al mare e ai monti circostanti, il sorgere del sole e il tramonto sono spettacolarmente suggestivi.",
                 'price' => 374,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/villa-palermo.jpg',
                 'type' => 'Villa',
                 'latitude' => '38.144860338581296',
                 'longitude' => '13.369420104398435',
                 'address' => 'Salita Belmonte, 43, 90142 Palermo PA',
-                'room' => 30,
-                'bed' => 30,
-                'bathroom' => 30,
+                'room' => 5,
+                'bed' => 5,
+                'bathroom' => 5,
                 'square_meters' => 1369,
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Aosta',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Bed and breakfast "La Pive" e tavolo d\'hôtes',
+                'description' => "Colazione inclusa, B&B di 25 m2 (incollato alla nostra casa), in Vaux et Chantegrue, ingresso indipendente, tranquillo, con terrazza con vista sul Mont D'or, a 10 minuti dalla stazione di Métabief, a 15 minuti da Pontarlier, a 20 minuti dalla Svizzera. Questa incantevole camera è attrezzata per 2 persone. (Possibilità di aggiungere un letto supplementare per un bambino) . Offriamo anche soluzioni pasti che possono essere prese in loco.",
                 'price' => 550,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/chalet-aosta.jpg',
                 'type' => 'Chalet',
                 'latitude' => '45.735064412557435',
                 'longitude' => '7.309165260534418',
                 'address' => 'Via Rue Liconi, 1, 11100 Aosta AO',
-                'room' => 6,
-                'bed' => 10,
-                'bathroom' => 4,
-                'square_meters' => 341,
+                'room' => 1,
+                'bed' => 1,
+                'bathroom' => 1,
+                'square_meters' => 25,
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Courmayeur',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Bed & breakfast in tipico chalet savoiardo',
+                'description' => "Confortevole camera in un piccolo villaggio a 800 metri di altitudine, a 10 minuti da Grand-Bornand, La Clusaz resort, a 20 minuti dal lago di Annecy, a 45 minuti da Ginevra.
+                                    Ampio salotto con 1 letto 140 in alcova , 1 letto 90 in salotto, divano,
+                                    Ampio bagno: vasca da bagno, cabina doccia, ingresso indipendente,
+                                    soleggiato balcone privato, spazio per bici drop-off, sci, ecc.....
+                                    La nostra pensione apre le sue porte a voi, per godere dei benefici della montagna.",
                 'price' => 400,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/chalet-courma.jpg',
                 'type' => 'Chalet',
                 'latitude' => '45.79719565438114',
                 'longitude' => '6.968934497025371',
@@ -362,11 +393,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Venezia',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Aparthotel Studio Staycity Serviced',
+                'description' => "Staycity Venice Mestre è anche idealmente situato. È solo una breve passeggiata (0,3 km) dalla stazione di Venezia Mestre, dove i treni partono per Venezia ogni 10-15 minuti e impiegano solo 10-12 minuti. Gli ospiti possono anche facilmente raggiungere Venezia con autobus e taxi. Inoltre, l'aeroporto Marco Polo di Venezia e quello di Treviso distano rispettivamente 8,1 km e 19,4 km.",
                 'price' => 1300,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-venezia.jpg',
                 'type' => 'Hotel',
                 'latitude' => '45.43435580607328',
                 'longitude' => '12.33197108196531',
@@ -378,11 +409,12 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Trieste',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Le Residenze dei Serravallo',
+                'description' => "L'alloggio si trova a Barcola, vicino al mare, a due passi dai trasporti pubblici, a 5 minuti dalla stazione dei treni ed il centro città. L'appartamento è adatto a coppie, a chi viaggia per lavoro e a famiglie con bambini. E' composto da soggiorno con caminetto, bagno, cucina abitabile completamente attrezzata e camera da letto matrimoniale. È compresa la pulizia nei giorni feriali ed il cambio di biancheria settimanale.
+                                    Sono richiesti i documenti e la tassa di soggiorno a tutti gli ospiti.",
                 'price' => 72,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-trieste.jpeg',
                 'type' => 'Appartamento',
                 'latitude' => '45.64648737793609',
                 'longitude' => '13.778264968184233',
@@ -394,11 +426,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Foggia',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'RESIDENZA DEL SELE APPARTAMENTO',
+                'description' => "Monolocale di nuovissima costruzione, moderno e di classe situato nel centro di Foggia, ideale per lunghi soggiorni, quando si cerca il comfort e il lusso di un albergo ma la quiete di una casa!! Al check-in non saremo fisicamente presenti (c’è check-in automatico, quindi l'accesso sarà in piena autonomia) ma resteremo a disposizione per indicarvi dove ci troviamo, i punti di interesse nei dintorni e come raggiungere le principali attrazioni della città. Suggeriamo buoni ristoranti dove gustare piatti tipici. Abbiamo pensato a tutto ma saremo al vostro fianco qualora aveste qualsiasi curiosità, necessità.",
                 'price' => 29,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-foggia.jpg',
                 'type' => 'Stanza',
                 'latitude' => '41.461542655779844',
                 'longitude' => '15.547627125685985',
@@ -410,11 +442,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Gallipoli',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'T B&B venti e Mari -Gallipoli Camera Tramontana',
+                'description' => "B&B familiare nel cuore della città.. tra il centro storico e la città nuova.. vicino a porto, castello, cinema e teatro..non lontano dalla splendida spiaggia della Purità.. Colazione, biancheria e riordino giornaliero inclusi. La camera Tramontana dispone di bagno privato, condizionatore, tv, phon, minifrigo ed una splendida vista sul golfo di Gallipoli.",
                 'price' => 93,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-gallipoli.jpg',
                 'type' => 'Appartamento',
                 'latitude' => '40.054920951234685',
                 'longitude' => '17.988127567963254',
@@ -426,11 +458,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Cagliari',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'La terrazza di S’oru ‘e Mari',
+                'description' => "bellissimo appartamento indipendente, appena ristrutturato e con terrazza situato al 1° piano di una signorile villa che si affaccia direttamente sul mare. L’appartamento presenta ingresso separato dal resto della villa ed è composto da: 1 luminosa camera matrimoniale dotata di condizionatore e 2 balconi; 1 soggiorno con sala da pranzo dotato di 2 comodi divani/letti, TV hd, condizionatore, un ampia terrazza sul mare dotata di barbecue e tavolo all’aperto; infine 1 cucina ben attrezzata ed un confortevole bagno.",
                 'price' => 330,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-sardegna.jpg',
                 'type' => 'Villa',
                 'latitude' => '39.21730931592477',
                 'longitude' => '9.259195996767332',
@@ -442,11 +474,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Bologna',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'P. Santo Stefano Loft',
+                'description' => "In pieno centro storico, dietro a Piazza Santo Stefano, a 5min. da Piazza Maggiore e dalle mete più suggestive di questa città medievale, potrete alloggiare in un appartamento nuovo di 50mq, sito all’interno di una corte silenziosa, completo di camera matrimoniale, Cavedio, sala con cucina, divano letto,Wi-Fi, TV4K HD e un bagno con tutti i comfort. L'appartamento dista 10min di autobus dalla Stazione Centrale dei treni, inoltre è affiancato da numerosi negozi e ristoranti prelibati.",
                 'price' => 120,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-bologna.jpg',
                 'type' => 'Appartamento',
                 'latitude' => '44.494603923371805',
                 'longitude' => '11.347321427964431',
@@ -458,11 +490,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Tropea',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Casa Zuleika Panoramic Hideaway',
+                'description' => "Una tipica casa siciliana con panorami mozzafiato sul mare delle Eolie e sulle isole di Alicudi, Filicudi e Salina. Situata in uno dei punti più alti dell'isola di Lipari, Casa Zuleika è un luogo per rigenerare corpo e mente lontano dalla folla e dallo stress della vita normale, tra la brezza dolce e il suono degli uccelli. Fate una passeggiata tra gli aranci e i fichi d'India in giardino o godetevi un aperitivo sulla terrazza mentre guardate uno degli spettacolari tramonti che riceviamo tutto l'anno.",
                 'price' => 861,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-tropea.jpg',
                 'type' => 'Villa',
                 'latitude' => '38.678694',
                 'longitude' => '15.895619',
@@ -474,11 +506,14 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Aquila',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Tognazzi Casa Vacanze',
+                'description' => "La villa si trova in una posizione panoramica, nel cuore dell'Abruzzo, a pochi Km dalle maggiori attrattive turistiche della Toscana.
+                                    La villa, completamente indipendente, si sviluppa su due piani e può accogliere fino a 9 persone.
+                                    Al piano terra si trovano la cucina con camino per grigliare, il salone con camino, divano letto e bagno di servizio/lavanderia.
+                                    Al piano superiore 1 camera tripla, 1 camera doppia, 1 camera matrimoniale e 2 bagni. Piscina ed idromassaggio riscaldato privati.",
                 'price' => 225,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-aquila.jpg',
                 'type' => 'Chalet',
                 'latitude' => '42.350105323577694',
                 'longitude' => '13.398547610381145',
@@ -490,11 +525,11 @@ class ApartmentSeeder extends Seeder
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Sanremo',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Sanremo Amazing Apartment w/ Private Parking',
+                'description' => "Accogliente monolocale con soppalco di 70 mq, in grado di ospitare fino a 6 persone, ubicato al terzo piano di uno stabile senza ascensore nel cuore di Sanremo. La proprietà è dotata di ogni comfort e un plus è sicuramente il terrazzo arredato al quinto piano, da cui è possibile intravedere il mare. La posizione è eccezionale! Siamo in via Corradi, una delle vie più belle della Città dei Fiori, con le sue piccole botteghe, caffetterie e ristoranti.",
                 'price' => 148,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-sanremo.jpg',
                 'type' => 'Appartamento',
                 'latitude' => '43.81761147068769',
                 'longitude' => '7.777505652498528',
@@ -502,15 +537,15 @@ class ApartmentSeeder extends Seeder
                 'room' => 3,
                 'bed' => 2,
                 'bathroom' => 2,
-                'square_meters' => 110,
+                'square_meters' => 70,
                 'visibility' => true
             ],
             [
-                'title' => 'Casa test Napoli',
-                'description' => "Tiny but cozy and joyful flat studio facing the Naviglio Canal,only few minutes of tram by the heart of Naviglia/Darsena. Small but cozy Flat Studio in front of Naviglio(canal)in Via Lodovico il Moro,10 minutes by tram from the hear of city mondanity,Navigli,and the new renovated old port of Milan,'Darsena',that became again the favourite area of tourists and citizen for taking a walk outside,cause of many events,all the nice bar and restaurants happening there. The flat is full of colours to transfer you some more joyness and good vibrations.It's pretty small(30mq),but you got everything you will need you in short stay,from kitchen to waching machine ecc.",
+                'title' => 'Grazioso Appartamento nel Cuore di Napoli',
+                'description' => "Situato nel cuore di Napoli, in una posizione che permette di raggiungere facilmente tutti i luoghi di interesse. La metropolitana di Via Toledo dista 3 minuti a piedi dalla struttura, 15 minuti a piedi per arrivare al Museo Archeologico Nazionale e al centro storico di Napoli. Inoltre nelle vicinanze ci sono numerosi negozi, ristoranti, pizzerie e bar. Accogliente e funzionale, vi trasporterà nella vera Napoli potrete raggiungere facilmente la movida notturna della città e le sue attrazioni.",
                 'price' => 63,
                 'availability' => true,
-                'cover' => 'apartments/app.milano.webp',
+                'cover' => 'apartments/casa-napule.jpg',
                 'type' => 'Appartamento',
                 'latitude' => '40.84299067955602',
                 'longitude' => '14.247808588128752',
