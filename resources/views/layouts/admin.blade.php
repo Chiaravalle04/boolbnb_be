@@ -26,15 +26,78 @@
     <body>
         <div id="app">
 
-            <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">MEGA BOOLBNB</a>
-                <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <header class="header_dashboard_container">
+
+                <div class="link_home">
+
+                    <a href="http://localhost:5174/">
+                        <i class="link_color fa-solid fa-arrow-left-long"></i>
+                    </a>
+
+                </div>
+
+                <div class="link_logout">
+
+                    <a class="link_hover txt_deco_none link_color" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+
+                </div>
+
+            </header>
+
+            <main class="main_dashboard_container">
+
+                <div class="user_details">
+
+                    <h2>Nicolas Chiaravalle</h2>
+
+                    <h6>nicolas.chiaravelle@gmail.com</h6>
+
+                    <h6>04/12/1997</h6>
+
+                </div>
+
+                <nav class="nav_bar_dashboard">
+
+                    <ul class="ul_bar_dashboard">
+                        <li>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.apartments.index' ? 'link_color_bold' : '' }}" href="{{route('admin.apartments.index')}}">
+                                <i class="fa-solid fa-building-user fa-lg fa-fw"></i> I tuoi Appartamenti
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.messages.index' ? 'link_color_bold' : '' }}" href="{{route('admin.messages.index')}}">
+                                <i class="fa-solid fa-envelope fa-lg fa-fw"></i> Messaggi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'link_color_bold' : '' }}" href="{{route('admin.dashboard')}}">
+                                <i class="fa-solid fa-signal fa-lg fa-fw"></i> Statistiche
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                </nav>
+
+                @yield('content')
+
+            </main>
+
+            {{-- <header class="navbar navbar-dark sticky-top flex-md-nowrap p-2 shadow">
+                <a class="navbar-brand col-md-3 col-lg-2 mx-4 px-3" href="/"><i class="link_color fa-solid fa-arrow-left"></i></a> --}}
+                {{-- <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> --}}
                 {{-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> --}}
-                <div class="navbar-nav">
-                    <div class="nav-item text-nowrap ms-2">
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                {{-- <div class="navbar-nav">
+                    <div class="nav-item text-nowrap mx-4">
+                        <a class="link_color" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
@@ -42,12 +105,12 @@
                             @csrf
                         </form>
                     </div>
-                </div>
-            </header>
+                </div> --}}
+            {{-- </header> --}}
 
-            <div class="container-fluid vh-100">
-                <div class="row h-100">
-                    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+            {{-- <div class="container-fluid vh-100">
+                <div class="row h-100"> --}}
+                    {{-- <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
                         <div class="position-sticky pt-3">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -57,11 +120,11 @@
                                 </li>
                                 
                                 {{-- appartamenti --}}
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.apartments.index' ? 'bg-secondary' : '' }}" href="{{route('admin.apartments.index')}}">
                                         <i class="fa-solid fa-house fa-lg fa-fw"></i> Appartamenti
                                     </a>
-                                </li>
+                                </li> --}}
 
                                 {{-- <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.services.index' ? 'bg-secondary' : '' }}" href="{{route('admin.services.index')}}">
@@ -70,11 +133,11 @@
                                 </li> --}}
 
                                 {{-- messaggi --}}
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.messages.index' ? 'bg-secondary' : '' }}" href="{{route('admin.messages.index')}}">
                                         <i class="fa-regular fa-image fa-lg fa-fw"></i> Messaggi
                                     </a>
-                                </li>
+                                </li> --}}
 
                                 {{-- sponsorizzazioni --}}
                                 {{-- <li class="nav-item">
@@ -82,17 +145,17 @@
                                         <i class="fa-solid fa-award fa-lg fa-fw"></i> Sponsorships
                                     </a>
                                 </li> --}}
-                            </ul>
+                            {{-- </ul> --}}
 
 
-                        </div>
-                    </nav>
+                        {{-- </div> --}}
+                    {{-- </nav> --}}
 
-                    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    {{-- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                         @yield('content')
                     </main>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </body>
