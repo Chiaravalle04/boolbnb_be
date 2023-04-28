@@ -129,7 +129,6 @@ class MessageSeeder extends Seeder
             $newMessage->name = $message['name'];
             $newMessage->email = $message['email'];
             $newMessage->message = $message['message'];
-            $newMessage->phone_number = $message['phone_number'];
             $newMessage->save();
         }
     }
