@@ -1,5 +1,39 @@
 @import 'colors';
 
-.container-fluid {
-    background-color: $bg-color;
+.card {
+    box-shadow: 0 0 .5rem $description-color;
+
+    .card-header {
+        font-weight: 500;
+        background-color: $bg-color;
+    }
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: $description-color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $description-color;
+}
+
+.form-check-input:focus {
+    border-color: $description-color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $description-color;
+}
+
+.form-check-input:checked {
+    border-color: $description-color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $description-color;
+    background-color: $link-color;
+}
+
+.my-btn {
+    background-color: $description-color;
+    color: white;
+    box-shadow: 0 0 .5rem $description-color;
+    transition: .5s ease;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    &:hover {
+        background-color: $link-color;
+        color: white;
+    }
 }
