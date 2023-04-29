@@ -72,13 +72,21 @@ class MessageController extends Controller
     {
         $apartments = Apartment::all();
 
+        $userId = Auth::id();
+
+        $messages = Message::whereHas('apartment', function ($query) use ($userId) {
+
+            $query->where('user_id', $userId);
+
+        })->orderBy('created_at', 'desc')->get();
+
         if ($message->apartment->user_id !== Auth::user()->id) {
 
             abort(403, 'Cosa cazzo vuoi fare?');
         
         }
 
-        return view('admin.messages.show', compact('message', 'apartments'));
+        return view('admin.messages.show', compact('message', 'messages', 'apartments'));
     }
 
     /**
