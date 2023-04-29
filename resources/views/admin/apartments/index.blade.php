@@ -4,7 +4,7 @@
 
         <div class="card_index_apartments border_new_apartment">
             <a href="{{ route('admin.apartments.create') }}">
-                <i class="fa-regular fa-plus fa-beat"></i>
+                <i class="fa-regular fa-plus"></i>
             </a>
         </div>
 

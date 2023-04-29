@@ -71,7 +71,7 @@
                         </li>
                         <li>
                             <a class="nav-link {{ Route::currentRouteName() == 'admin.messages.index' ? 'link_color_bold' : '' }}" href="{{route('admin.messages.index')}}">
-                                <i class="fa-solid fa-envelope fa-lg fa-fw"></i> Messaggi
+                                <i class="fa-solid fa-comments fa-lg fa-fw"></i> Messaggi
                             </a>
                         </li>
                         <li>
