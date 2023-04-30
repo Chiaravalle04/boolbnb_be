@@ -1,0 +1,49 @@
+// Checkout Sponsorship
+.checkout_sponsorship_container {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: $bg-color;
+    box-shadow: 0px 7px 15px -4px #000000;
+    .header_checkout {
+        color: $title-color;
+    }
+    .main_checkout {
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        .summary_checkout {
+            width: 50%;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin-top: 20px;
+                li {
+                    padding-left: 80px;
+                    p {
+                        color: $title-color;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .payment_container {
+            width: 50%;
+            padding-right: 80px;
+            #payment-form {
+                input[type="submit"] {
+                    display: block;
+                    width: 30%;
+                    height: 40px;
+                    line-height: 35px;
+                    text-decoration: none;
+                    border: 0;
+                    border-radius: 10px;
+                    text-align: center;
+                    color: #fff;
+                    margin-left: auto;
+                    background-color: $link-color;
+                }
+            }
+        }
+    }
+}

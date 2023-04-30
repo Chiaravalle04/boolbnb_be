@@ -34,9 +34,7 @@
                 <i class="fa-solid fa-hand-holding-dollar"></i><span class="fw-bold"> Tipo di sponsorhip:</span> 
                 @if (count($apartment->sponsorships) > 0)
                     @foreach ($apartment->sponsorships as $sponsorship)
-                        <div>
                             <span>{{$sponsorship->name }}</span>
-                        </div>
                     @endforeach
                 
                 @else

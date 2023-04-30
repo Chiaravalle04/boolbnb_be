@@ -1,6 +1,28 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container">
+<div class="index_sponsorship_container">
+
+    <div class="header_sponsorship">
+
+        <h3>Scegli il piano più adatto a te</h3>
+
+    </div>
+
+    <div class="main_sponsorship">
+
+        @foreach ($sponsorships as $sponsorship)
+            <div class="card_sponsorship"> 
+                <h4>{{$sponsorship->name}}</h4>
+                <p><b>Durata piano:</b> {{ $sponsorship->duration }} ore</p> 
+                <p class="price_sponsorship">€ {{$sponsorship->price}}</p>
+                <a href="{{ route('admin.sponsorships.checkout', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}">Seleziona</a>
+            </div>
+        @endforeach
+
+    </div>
+
+</div>
+{{-- <div class="container">
     <div class="row">
         <div class="col-12">
             <div class="py-4">
@@ -26,5 +48,5 @@
             </div>
         @endforeach
     </div>
-</div>
+</div> --}}
 @endsection
