@@ -44,6 +44,14 @@ input.addEventListener("keyup", function () {
             });
             autocompleteList.appendChild(liElement);
         }
+        // Verifica se il numero di risultati supera 5
+        if (results.length > 5) {
+        // Aggiunge una classe CSS per attivare la scrollbar
+        autocompleteList.classList.add('scrollbar');
+        } else {
+        // Rimuove la classe CSS per disattivare la scrollbar
+        autocompleteList.classList.remove('scrollbar');
+        }
 
     }).catch(function (error) {
         console.log(error);

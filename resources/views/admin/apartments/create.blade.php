@@ -63,12 +63,12 @@
                         {{-- Address --}}
                         <div class="col-md-7">
                             <div class="mb-3">
-                                <label for="address" class="form-label @error('type') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
+                                <label for="address" class="form-label @error('address') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
                                 <div class="form-outline w-100">
-                                    <input type="text" class="form-control @error('type') border border-3 border-danger @enderror" id="address" placeholder="Inserisci l'indirizzo" name="address"
-                                value="{{ old('address') }}" required>
+                                    <input type="text" class="form-control @error('address') border border-3 border-danger @enderror" id="address" placeholder="Inserisci l'indirizzo" name="address"
+                                    value="{{ old('address') }}" required>
                                 </div>
-                                <ul id="autocomplete-list" class="list-group"></ul>
+                                <ul id="autocomplete-list" class="list-group box-list"></ul>
                                 {{-- <input type="text" 
                                     class="form-control" 
                                     id="address" 
@@ -147,7 +147,6 @@
                                     required
                                     step="0.01"
                                 >
-                                <div class="input-group-text">,00</div>
                             </div>
                         </div>
                         {{-- Type --}} 
@@ -184,34 +183,33 @@
 
                     {{-- Services --}}
                     <div class="row mt-2">
-                            <label for="services" class="form-label @error('services') text-danger @enderror">Servizi</label>
-                            <div class="mb-3 d-flex flex-wrap justify-content-space-between">
-                            @foreach ($services as $service)
-                                <div class="form-check w-25 ">
-                                    <input
-                                        class="form-check-input @error('services') border border-3 border-danger @enderror"
-                                        name="services[]"
-                                        type="checkbox"
-                                        id="tag-{{ $service->id }}"
-                                        value="{{ $service->id }}"
-                                        {{ in_array($service->id, old('tags', [])) ? 'checked' : '' }}>
-                                    <label class="form-check-label" for="tag-{{ $service->id }}">
-                                        {{ $service->name }}
-                                    </label>
-                                </div>
-                            @endforeach
+                        <label for="services" class="form-label fw-medium @error('services') text-danger @enderror">Servizi</label>
+                        <div class="mb-3 d-flex flex-wrap justify-content-space-between">
+                        @foreach ($services as $service)
+                            <div class="form-check w-25 ">
+                                <input
+                                    class="form-check-input @error('services') border border-3 border-danger @enderror"
+                                    name="services[]"
+                                    type="checkbox"
+                                    id="tag-{{ $service->id }}"
+                                    value="{{ $service->id }}"
+                                    {{ in_array($service->id, old('tags', [])) ? 'checked' : '' }}>
+                                <label class="form-check-label" for="tag-{{ $service->id }}">
+                                    {{ $service->name }}
+                                </label>
+                            </div>
+                        @endforeach
                         </div>
                     </div>
 
-                    <div>
-                        <p class="mt-3">
-                            N.B. i campi contrassegnati con <span class="text-danger">*</span> sono obbligatori.
+                    <div class="mt-3 ">
+                        <p class="fst-italic">
+                            <span class="fw-semibold">N.B.</span> i campi contrassegnati con <span class="text-danger">*</span> sono obbligatori.
                         </p>
                     </div>
 
                     <button class="btn my-btn" type="submit">Aggiungi Appartamento</button>
                 </form>
-
             </div>
         </div>
     </div>

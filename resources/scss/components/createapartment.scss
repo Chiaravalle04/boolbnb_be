@@ -9,6 +9,11 @@
     }
 }
 
+.form-label {
+    font-style: italic;
+    font-size: 18px;
+}
+
 .form-control:focus, .form-select:focus {
     border-color: $description-color;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $description-color;
@@ -37,3 +42,19 @@
         color: white;
     }
 }
+
+.list-group.box-list {
+    width: 55%;
+    position: absolute;
+    z-index: 30;
+}
+
+.scrollbar {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+
+
+
+
