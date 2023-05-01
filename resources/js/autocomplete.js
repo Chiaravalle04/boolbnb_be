@@ -12,6 +12,12 @@ input.addEventListener("keyup", function () {
         return;
     }
 
+input.addEventListener("input", function() {
+    if (input.value === '') {
+        autocompleteList.innerHTML = '';
+        }
+    });
+
     const apiUrl = 'https://api.tomtom.com/search/2/geocode/';
 
     delete axios.defaults.headers.common['X-Requested-With'];
