@@ -16,10 +16,10 @@
 
                     <div>
                         <canvas id="myChart"></canvas>
+                        <canvas id="myDoughnutChart"></canvas>
                     </div>
                     <script>
                         // const ctx = document.getElementById('myChart');
-                      
                         // new Chart(ctx, {
                         //   type: 'bar',
                         //   data: {
@@ -79,11 +79,48 @@
                             },
                             legend: {
                                 display: false
-                            }
+                            },
                             }
                         })
-                        
-                      </script>
+
+                        const dnc = document.getElementById('myDoughnutChart')
+                        // eslint-disable-next-line no-unused-vars
+                        const myDoughnutChart = new Chart(dnc, {
+                            type: 'doughnut',
+                            data: {
+                            labels: [
+                                'Sunday',
+                                'Monday',
+                                'Tuesday',
+                                'Wednesday',
+                                'Thursday',
+                                'Friday',
+                                'Saturday'
+                            ],
+                            datasets: [{
+                                data: [
+                                    300,
+                                    50,
+                                    100,
+                                    200,
+                                    40,
+                                    150,
+                                    120
+                                ],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)', //rosso
+                                    'rgb(54, 162, 235)', //blu
+                                    'rgb(255, 205, 86)', //giallo
+                                    'rgb(52, 228, 75)', //verde
+                                    'rgb(238, 131, 44)', //arancione
+                                    'rgb(128, 44, 238)', //viola
+                                    'rgb(44, 215, 238)' //azzurro
+                                    ],
+                                    hoverOffset: 4
+                                }]
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
