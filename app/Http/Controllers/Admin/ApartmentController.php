@@ -48,7 +48,7 @@ class ApartmentController extends Controller
             $apartments;
         }
         
-        return view('admin.apartments.index', compact('apartments'));
+        return view('admin.apartments.index', compact('user', 'apartments'));
     }
 
     /**
@@ -58,9 +58,11 @@ class ApartmentController extends Controller
      */
     public function create()
     {
+        $user = Auth::user();
+
         $services = Service::all();
 
-        return view('admin.apartments.create', compact('services'));
+        return view('admin.apartments.create', compact('user', 'services'));
     }
 
     /**
@@ -117,6 +119,8 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
+        $user = Auth::user();
+
         $services = $apartment->services;
         $sponsorships = $apartment->sponsorships;
 
@@ -126,7 +130,7 @@ class ApartmentController extends Controller
         
         }
 
-        return view('admin.apartments.show', compact('apartment', 'services', 'sponsorships'));
+        return view('admin.apartments.show', compact('user', 'apartment', 'services', 'sponsorships'));
     }
 
     /**
@@ -137,6 +141,8 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
+        $user = Auth::user();
+
         if ($apartment->user_id !== Auth::user()->id) {
 
             abort(403, 'Cosa cazzo vuoi fare?');
@@ -145,7 +151,7 @@ class ApartmentController extends Controller
 
         $services = Service::all();
 
-        return view('admin.apartments.edit', compact('apartment', 'services'));
+        return view('admin.apartments.edit', compact('user', 'apartment', 'services'));
     }
 
     /**

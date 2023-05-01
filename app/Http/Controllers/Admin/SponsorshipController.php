@@ -10,6 +10,9 @@ use App\Http\Requests\UpdateSponsorshipRequest;
 use App\Models\Apartment;
 use App\Models\Sponsorship;
 
+// Helpers
+use Illuminate\Support\Facades\Auth;
+
 class SponsorshipController extends Controller
 {
     /**
@@ -19,19 +22,22 @@ class SponsorshipController extends Controller
      */
     public function index(Apartment $apartment)
     {
+        $user = Auth::user();
+
         $apartment = Apartment::findOrFail($apartment->id);
         $sponsorships = Sponsorship::all();
 
         //dd($sponsorships);
-        return view('admin.sponsorships.index', compact('apartment', 'sponsorships'));
+        return view('admin.sponsorships.index', compact('user', 'apartment', 'sponsorships'));
     }
 
     public function checkout(Apartment $apartment, Sponsorship $sponsorship)
     {
+        $user = Auth::user();
         $apartment = Apartment::findOrFail($apartment->id);
         $sponsorship = Sponsorship::findOrFail($sponsorship->id);
         //dd($sponsorships);
-        return view('admin.sponsorships.checkout', compact('apartment', 'sponsorship'));
+        return view('admin.sponsorships.checkout', compact('user', 'apartment', 'sponsorship'));
     }
 
     /**

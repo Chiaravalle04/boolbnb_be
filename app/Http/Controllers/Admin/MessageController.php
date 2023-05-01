@@ -23,6 +23,8 @@ class MessageController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
+
         $userId = Auth::id();
 
         $apartments = Apartment::where('user_id', Auth::user()->id)->get();
@@ -34,7 +36,7 @@ class MessageController extends Controller
 
         })->orderBy('created_at', 'desc')->get();
 
-        return view('admin.messages.index', compact('messages', 'apartments'));
+        return view('admin.messages.index', compact('user', 'messages', 'apartments'));
     }
 
     /**
@@ -70,6 +72,8 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+        $user = Auth::user();
+
         $apartments = Apartment::all();
 
         $userId = Auth::id();
@@ -86,7 +90,7 @@ class MessageController extends Controller
         
         }
 
-        return view('admin.messages.show', compact('message', 'messages', 'apartments'));
+        return view('admin.messages.show', compact('user', 'message', 'messages', 'apartments'));
     }
 
     /**
