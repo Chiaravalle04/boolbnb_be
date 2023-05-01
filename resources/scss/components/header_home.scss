@@ -1,0 +1,66 @@
+// Header Home
+.my-header {
+    height: 70px;
+    justify-content: space-between;
+    background-color: $bg-color;
+    color: #fff;
+    a {
+        text-decoration: none;
+        color: $link-color;
+    }
+    .logo-boolbnb {
+        font-size: 50px;
+    }
+    .myLogo {
+        height: 60px;
+        width: 130px;
+    }
+    ul {
+        list-style: none;
+        // font-weight: bold;
+        li {
+            text-decoration: none;
+            margin-right: 25px;
+            //border-right: 1px solid var(--title-color);
+            padding-right: 25px;
+            text-transform: uppercase;
+            a {
+                text-decoration: none;
+                color: #fff;
+                display: inline-block;
+                transition: 0.25s all;
+                &:hover {
+                    transform: scale(1.1);
+                    color: $link-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .link {
+        color: $title-color;
+        // font-weight: bold;
+        padding: 3px 20px;
+        border-radius: 10px;
+        border: 1px solid $title-color;
+        &:hover {
+            //box-shadow: inset 0px 0px 0px 2px var(--link-color);
+            // color: var(--link-color);
+            background-color: lightgray;
+            color: black;
+            transition: 1s;
+        }
+    }
+    .link-two {
+        background-color: $link-color;
+        color: #fff;
+        // font-weight: bold;
+        padding: 5px 20px;
+        border-radius: 10px;
+        &:hover {
+            color: #fff;
+            background-color: rgba(253, 29, 29, 1);
+            transition: 1s;
+        }
+    }
+}
