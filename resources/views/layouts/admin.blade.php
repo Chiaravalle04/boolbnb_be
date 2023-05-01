@@ -53,17 +53,22 @@
 
                 <div class="user_details">
 
-                    <h2>Nicolas Chiaravalle</h2>
+                    <h2>{{ $user->name }} {{ $user->surname }}</h2>
 
-                    <h6>nicolas.chiaravelle@gmail.com</h6>
+                    <h6>{{ $user->email }}</h6>
 
-                    <h6>04/12/1997</h6>
+                    <h6>{{ $user->birth_date }}</h6>
 
                 </div>
 
                 <nav class="nav_bar_dashboard">
 
                     <ul class="ul_bar_dashboard">
+                        <li>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'link_color_bold' : '' }}" href="{{route('admin.dashboard')}}">
+                                <i class="fa-solid fa-signal fa-lg fa-fw"></i> Statistiche
+                            </a>
+                        </li>
                         <li>
                             <a class="nav-link {{ Route::currentRouteName() == 'admin.apartments.index' ? 'link_color_bold' : '' }}" href="{{route('admin.apartments.index')}}">
                                 <i class="fa-solid fa-building-user fa-lg fa-fw"></i> I tuoi Appartamenti
@@ -72,11 +77,6 @@
                         <li>
                             <a class="nav-link {{ Route::currentRouteName() == 'admin.messages.index' ? 'link_color_bold' : '' }}" href="{{route('admin.messages.index')}}">
                                 <i class="fa-solid fa-comments fa-lg fa-fw"></i> Messaggi
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'link_color_bold' : '' }}" href="{{route('admin.dashboard')}}">
-                                <i class="fa-solid fa-signal fa-lg fa-fw"></i> Statistiche
                             </a>
                         </li>
                     </ul>
