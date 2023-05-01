@@ -2,7 +2,7 @@
 .container_index_apartments {
     padding-top: 30px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     a {
         display: block;
@@ -23,7 +23,7 @@
     }
     .card_index_apartments {
         width: calc(100% / 4 - 10px);
-        margin: 10px 0;
+        margin: 10px 5px;
         height: 300px;
         padding: 10px;
         background-color: $bg-color;
