@@ -1,12 +1,17 @@
 // Login
 .title-bool{
     font-family: 'Mr Dafoe', cursive;
-    font-size: 3rem;
+    color: #A62626;
+    font-size: 5rem;
 }
 .container-login {
     height: calc(100vh - 130px);
     // height: 100vh;
     // background-color: red;
+}
+
+.card{
+    background-color: rgb(50, 50, 50) !important;
 }
 
 .row-login {
