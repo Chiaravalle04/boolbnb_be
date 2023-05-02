@@ -66,7 +66,7 @@
                                         <label for="address" class="form-label @error('type') text-danger @enderror">Indirizzo<span class="text-danger">*</span></label>
                                         <div class="form-outline w-100">
                                             <input type="text" class="form-control @error('type') border border-3 border-danger @enderror" id="address" placeholder="Inserisci l'indirizzo" name="address"
-                                            value="{{ old('address') }}" required>
+                                            value="{{ old('address', $apartment->address) }}" required>
                                         </div>
                                         <ul id="autocomplete-list" class="list-group box-list"></ul>
                                         {{-- <input type="text" 
