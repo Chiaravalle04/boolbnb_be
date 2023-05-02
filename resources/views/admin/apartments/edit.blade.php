@@ -85,7 +85,7 @@
                             <div class="row mt-2">
                                 {{-- Room --}}
                                 <div class="mb-3 col-md-3">
-                                    <label for="room" class="form-label @error('room') text-danger @enderror">Numero di stanze<span class="text-danger">*</span></label>
+                                    <label for="room" class="form-label @error('room') text-danger @enderror">N° stanze<span class="text-danger">*</span></label>
                                     <input 
                                         type="number" 
                                         class="form-control @error('room') border border-3 border-danger @enderror"
@@ -98,7 +98,7 @@
 
                                 {{-- Bed --}}
                                 <div class="mb-3 col-md-3">
-                                    <label for="bed" class="form-label @error('bed') text-danger @enderror">Numero di letti<span class="text-danger">*</span></label>
+                                    <label for="bed" class="form-label @error('bed') text-danger @enderror">N° letti<span class="text-danger">*</span></label>
                                     <input 
                                         type="number" 
                                         class="form-control @error('bed') border border-3 border-danger @enderror"
@@ -111,7 +111,7 @@
 
                                 {{-- Bathroom --}}
                                 <div class="mb-3 col-md-3">
-                                    <label for="bathroom" class="form-label @error('bathroom') text-danger @enderror">Numero di bagni<span class="text-danger">*</span></label>
+                                    <label for="bathroom" class="form-label @error('bathroom') text-danger @enderror">N° bagni<span class="text-danger">*</span></label>
                                     <input 
                                         type="number" 
                                         class="form-control @error('bathroom') border border-3 border-danger @enderror"
@@ -156,7 +156,7 @@
 
                                 {{-- Type --}}
                                 <div class="mb-3 col-md-3">
-                                    <label for="type" class="form-label @error('type') text-danger @enderror">Tipologia<span class="text-danger">*</span></label>
+                                    <label for="type" class="form-label @error('type') text-danger @enderror">Tipo di struttura<span class="text-danger">*</span></label>
                                     <select 
                                     class="form-select @error('type') border border-3 border-danger @enderror"
                                     name="type"
