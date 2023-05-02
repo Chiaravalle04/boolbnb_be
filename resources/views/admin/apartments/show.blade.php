@@ -41,6 +41,14 @@
                     <span>Nessuna sponsorizzazione</span>
                 @endif
             </li>
+            @foreach ($apartment->sponsorships as $sponsorship)
+            @if (count($apartment->sponsorships) > 0 && !($sponsorship->pivot->expired_date == null))
+            <li>
+                <i class="fa-solid fa-stopwatch"></i><span class="fw-bold"> Scadenza sponsorship:</span> 
+                <span>{{\Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $sponsorship->pivot->expired_date)->format('d/m/Y H:i') }}</span>
+            </li>
+            @endif
+            @endforeach
         </ul>
 
         <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="sponsorship_button">
