@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="index_container_messages">
+<div class="index_container_messages mt-4">
 
     @if (count($messages) > 0)
 

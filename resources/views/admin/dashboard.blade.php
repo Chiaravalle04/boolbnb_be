@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container-fluid mt-4">
+    @if (Auth::user()->apartments->count()>0)
     <div class="row justify-content-center">
         <div class="col-md-7">
             <div class="card">
@@ -36,6 +37,13 @@
                     </div>
                 </div>
             </div>
+            @else
+            <div class="no-statistics">
+
+                <h3>Le tue statistiche appariranno qui</h3>
+        
+            </div>
+            @endif
         </div>
     </div>
     <script>
