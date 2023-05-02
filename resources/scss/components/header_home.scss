@@ -2,7 +2,7 @@
 .my-header {
     height: 70px;
     justify-content: space-between;
-    background-color: rgb(50, 50, 50);
+    background-color: $bg-color;
     color: #fff;
 
     a {
@@ -41,10 +41,9 @@
         }
     }
     .link {
-        color: #fff;
         padding: 3px 20px;
         border-radius: 10px;
-        border: 1px solid #fff;
+        border: 1px solid;
         &:hover {
             //box-shadow: inset 0px 0px 0px 2px var(--link-color);
             // color: var(--link-color);
