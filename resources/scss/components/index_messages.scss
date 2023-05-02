@@ -10,6 +10,9 @@
         border-right: 1px solid $title-color;
         .card_container_message {
             height: 80px;
+            overflow: hidden;
+            white-space: nowrap; 
+            text-overflow: ellipsis;
             border-bottom: 1px solid $title-color;
             padding: 10px;
             margin-right: 10px;
