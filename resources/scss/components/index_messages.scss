@@ -48,6 +48,9 @@
     .text_message {
         width: 70%;
         padding: 25px;
+        overflow: hidden;
+        white-space: normal;
+        word-wrap: break-word;
         h4 {
             color: $title-color;
         }
