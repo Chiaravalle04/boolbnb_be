@@ -57,7 +57,7 @@
                             @guest
                                 <a class="text-decoration-none link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
-                                <a class="text-decoration-none ms-2 link-two" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="text-decoration-none ms-2 link-two" href="{{ route('register') }}">{{ __('Registrati') }}</a>
                             @endif
                             @else
                                 <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
