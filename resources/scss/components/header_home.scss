@@ -41,7 +41,7 @@
         }
     }
     .link {
-        padding: 3px 20px;
+        padding: 5px 20px;
         border-radius: 10px;
         border: 1px solid;
         &:hover {
@@ -55,12 +55,13 @@
     .link-two {
         background-color: $link-color;
         color: #fff;
+        border: 1px solid;
         // font-weight: bold;
         padding: 5px 20px;
         border-radius: 10px;
         &:hover {
-            color: #fff;
-            background-color: rgba(253, 29, 29, 1);
+            color: black;
+            background-color: lightgray;
             transition: 1s;
         }
     }
