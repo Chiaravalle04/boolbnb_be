@@ -92,6 +92,7 @@
                     20320,
                     25025
                 ],
+                label:'Andamento annuale',
                 lineTension: 0,
                 backgroundColor: 'transparent',
                 borderColor: '#007bff',
