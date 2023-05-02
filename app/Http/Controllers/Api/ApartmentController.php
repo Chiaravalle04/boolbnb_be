@@ -37,7 +37,7 @@ class ApartmentController extends Controller
                 }, '=', count($services));
             })
             ->when($request->input('type'), function ($query, $type) {
-                $query->where('type', '=', $type);
+                $query->whereIn('type', $type);
             })
             ->when($request->input('bed'), function ($query, $bed) {
                 $query->where('bed', '>=', $bed);
