@@ -9,7 +9,8 @@
 
                 <div class="container-img-login text-center">
 
-                    <img class="my-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png" alt="">
+                    {{-- <img class="my-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png" alt=""> --}}
+                    <h1 class="title-bool">BoolBnb</h1>
 
                 </div>
 
