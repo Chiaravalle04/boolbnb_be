@@ -2,6 +2,8 @@
 @section('content')
 <div class="index_container_messages">
 
+    @if (count($messages) > 0)
+
     <div class="chat_list">
 
         @foreach ($messages as $message)
@@ -20,6 +22,16 @@
         @yield('content_message')
 
     </div>
+
+    @else 
+
+    <div class="nothing_messages">
+
+        <h3>I tuoi messaggi appariranno qui</h3>
+
+    </div>
+
+    @endif
 
 </div>
 @endsection
