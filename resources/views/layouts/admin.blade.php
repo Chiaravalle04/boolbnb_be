@@ -55,7 +55,7 @@
                 <div class="link_home">
 
                     <a href="http://localhost:5174/">
-                        <i class="link_color fa-solid fa-arrow-left-long"></i>
+                        Torna alla home
                     </a>
 
                 </div>
