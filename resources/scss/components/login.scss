@@ -1,13 +1,11 @@
 // Login
 .title-bool{
     font-family: 'Mr Dafoe', cursive;
-    color: #A62626;
+    color: #020758;
     font-size: 5rem;
 }
 .container-login {
     height: calc(100vh - 130px);
-    // height: 100vh;
-    // background-color: red;
 }
 
 .row-login {
@@ -40,17 +38,17 @@
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    background-color: #A62626;
+    background-color: #020758;
     transition: all 0.4s ease-in;
     &:hover {
         background-color: #FFF;
-        border: 2px solid #A62626;
-        color: #A62626;
+        border: 2px solid #020758;
+        color: #020758;
     }
 }
 
 .my-label {
-    color: #A62626;
+    color: #020758;
     font-weight: bold;
 }
 
@@ -59,6 +57,6 @@
     height: 40px;
     border-radius: 10px;
     padding: 10px 15px;
-    border: 1px solid #A62626;
+    border: 1px solid #020758;
     outline: none;
 }
