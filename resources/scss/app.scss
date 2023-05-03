@@ -11,4 +11,25 @@
 @import './components/index_sponsorship.scss';
 @import './components/checkout_sponsorship.scss';
 @import './components/header_home.scss';
-@import './components/fonts.scss'
+@import './components/fonts.scss';
+
+// Scroll bar
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: $bg-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: $link-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: $title-color;
+}
