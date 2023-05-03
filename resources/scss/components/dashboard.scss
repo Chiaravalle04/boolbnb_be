@@ -8,6 +8,21 @@
     align-items: center;
     color: $link-color;
     text-decoration: none;
+
+    .link_home {
+        
+        a {
+            text-decoration: none;
+            color: $link-color;
+            display: inline-block;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: .1s;
+            }
+        }
+
+    }
 }
 
 .link_color {
@@ -20,9 +35,15 @@
     font-weight: bold;
 }
 
-.link_hover:hover {
+.link_hover {
+    display: inline-block;
     color: $link-color;
-    font-weight: bold;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: .1s;
+        color: $link-color;
+    }
 }
 
 .txt_deco_none {
