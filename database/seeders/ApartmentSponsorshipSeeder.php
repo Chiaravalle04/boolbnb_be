@@ -22,8 +22,10 @@ class ApartmentSponsorshipSeeder extends Seeder
 
         $sponsorships = Sponsorship::all()->pluck('id');
 
-        foreach ($faker->randomElements($apartments, 8) as $apartment) {
-            $apartment->sponsorships()->attach($faker->randomElement($sponsorships));
+        foreach ($faker->randomElements($apartments, 10) as $apartment) {
+            $apartment->sponsorships()->attach($faker->randomElement($sponsorships), [
+                'expired_date' => Carbon::now()->addDays(7)
+            ]);
         }
     }
 }
